@@ -19,7 +19,7 @@ CHUNK = 1024  # CHUNKS of bytes to read each time from mic
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
 RATE = 16000
-THRESHOLD = 2000  # The threshold intensity that defines silence
+THRESHOLD = 3000  # The threshold intensity that defines silence
                   # and noise signal (an int. lower than THRESHOLD is silence).
 
 SILENCE_LIMIT = 3  # Silence limit in seconds. The max ammount of seconds where
@@ -101,6 +101,7 @@ def listen_for_speech(threshold=THRESHOLD, num_phrases=1):
             filename = save_speech(list(prev_audio) + audio2send, p)
             # Send file to Google and get response
             r = stt_google_wav(filename) 
+            if num_phrases == -1: pass
             else:
                 response.append(r)
             # Remove temp file. Comment line to review.
@@ -167,7 +168,6 @@ def stt_google_wav(audio_fname):
         response = p.read()
         res = eval(response)['hypotheses']
     except:
-        #print "Couldn't parse service response"
         res = None
 
     if del_flac:
