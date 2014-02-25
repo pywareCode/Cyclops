@@ -171,7 +171,12 @@ def stt_google_wav(audio_fname):
         res = None
 
     if del_flac:
-        os.remove(filename)  # Remove temp file
+        try:
+            os.remove(filename)  # Remove temp file
+        except:
+            print 'Error deleting file...'
+            time.sleep(5)
+            os.remove(filename)
 
     return res
 
