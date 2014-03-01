@@ -23,7 +23,7 @@ def Cyclops(DEBUG=False):
             if DEBUG: print 'Not complete command'
         #Determin master command
         if cmd[0] == 'what':
-            cmds.What(cmd, DEBUG).math()
+            cmds.What(cmd, DEBUG)
         elif cmd[0] == 'walk':
             master_cmd = 'walk'
         elif cmd[0] == 'pickup' or cmd[0] == 'pick' and cmd[1] == 'up':
