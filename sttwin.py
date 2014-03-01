@@ -105,7 +105,10 @@ def listen_for_speech(threshold=THRESHOLD, num_phrases=1):
             else:
                 response.append(r)
             # Remove temp file. Comment line to review.
-            os.remove(filename)
+            try:
+                os.remove(filename)
+            except:
+                print 'Error removing file.'
             # Reset all
             started = False
             slid_win = deque(maxlen=SILENCE_LIMIT * rel)

@@ -6,16 +6,21 @@ import datetime
 class What(object):
     def __init__(self, cmd, DEBUG=False):
         self.DEBUG = DEBUG
-        if DEBUG: print 'Running Command...'
         self.cmd = cmd
+        #Remove 'what' from command
         self.cmd.pop(0)
         #Run math() if math problem
-        if cmd[0] == 'is':
+        if cmd[0] == 'is' and cmd[1] != 'your':
+            #Remove 'is' from command
             self.cmd.pop(0)
             self.math()
         #Run time() if time question
         if cmd[0] == 'time' or cmd[0] == 'day':
             self.time()
+        if self.cmd[0] == 'is' and self.cmd[1] == 'your':
+            self.cmd.pop(0)
+            self.cmd.pop(0)
+            self.me()
 
     def get_month(self, num, num2):
         if num2 == '1':
@@ -83,7 +88,18 @@ class What(object):
             time = str(self.raw_time[0])
             month = self.get_month(time[5], time[6])
             
-            if self.DEBUG: print 'Today is ' + month + ' ' + time[-2] + time[-1] + ', ' + time[0] + time[1] + time[2] + time[3] 
+            if self.DEBUG: print 'Today is ' + month + ' ' + time[-2] + time[-1] + ', ' + time[0] + time[1] + time[2] + time[3]
+
+    def me(self):
+        if self.cmd[0] == 'name':
+            print 'My name is Cyclops of course.'
+        if self.cmd[0] == 'phone':
+            print "I don't think I should tell you that."
+        if self.cmd[0] == 'email':
+            print 'My email is cyclopsrobot@gmail.com.'
+        if self.cmd[0] == 'problem':
+            print "Whatever it is, I don't care."
+            
             
                 
     
