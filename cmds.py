@@ -1,6 +1,8 @@
 #Commands
 #By Tyler Spadgenske
 
+import time
+
 class What(object):
     def __init__(self, cmd, DEBUG=False):
         if DEBUG: print 'Running Command...'
@@ -31,12 +33,13 @@ class What(object):
                 self.answer = int(self.cmd[0]) * int(self.cmd[2])
             elif self.cmd[1] == 'divided':
                 self.answer = int(self.cmd[0]) / int(self.cmd[3])
-            else:
-                if self.DEBUG: print 'Invalid Equation'
         except:
-            if self.DEBUG: print 'Invalid Imput'
+            if self.DEBUG: print 'Not, math, looking elsewhere...'
 
         if self.DEBUG: print 'ANSWER = ', str(self.answer)
+
+    def time(self):
+        pass
             
         
     
