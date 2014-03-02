@@ -99,7 +99,38 @@ class What(object):
             print 'My email is cyclopsrobot@gmail.com.'
         if self.cmd[0] == 'problem':
             print "Whatever it is, I don't care."
-            
+
+#Move onto walking functions
+class Walk():
+    def __init__(self, cmd=['walk','happy'], DEBUG=False):
+        self.cmd = cmd
+        self.DEBUG = DEBUG
+        print self.cmd
+        self.cmd.pop(0)
+        if len(self.cmd) != 0:
+            if self.cmd[0] == 'forward':
+                self.forward()
+            if self.cmd[0] == 'backward':
+                self.backward()
+            if self.cmd[0] == 'left':
+                self.left()
+            if self.cmd[0] == 'right':
+                self.right()
+
+    def forward(self):
+        print 'Walking Forward'
+
+    def backward(self):
+        print 'Walking Backward'
+
+    def left(self):
+        print 'Turning left'
+
+    def right(self):
+        print 'Turning right'
+
+    def stop(self):
+        print 'Stopping'      
             
                 
     

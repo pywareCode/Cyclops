@@ -10,7 +10,7 @@ def Cyclops(DEBUG=False):
     while True:
         print
         #Get the command and convert it to a list
-        cmd = getcmd.get(THRESHOLD)
+        cmd = getcmd.get(THRESHOLD, True)
         if DEBUG: print 'COMMAND:', cmd
 
         cmd.pop(0)
@@ -24,8 +24,10 @@ def Cyclops(DEBUG=False):
         #Determin master command
         if cmd[0] == 'what':
             cmds.What(cmd, DEBUG)
-        elif cmd[0] == 'walk':
-            master_cmd = 'walk'
+        elif cmd[0] == 'walk' or cmd[0] == 'turn':
+            cmds.Walk(cmd, DEBUG)
+        elif cmd[0] == 'stop':
+            cmds.Walk(cmd, DEBUG).stop()
         elif cmd[0] == 'pickup' or cmd[0] == 'pick' and cmd[1] == 'up':
             master_cmd = 'pickup'
         elif cmd[0] == 'set' and cmd[1] == 'down':

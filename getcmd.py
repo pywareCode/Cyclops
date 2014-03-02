@@ -1,6 +1,6 @@
 #Get Command
 #By Tyler Spadgenske
-import sttwin
+import sttwin, cmds
 
 def get(THRESHOLD, DEBUG=False):
     while True:
@@ -8,9 +8,11 @@ def get(THRESHOLD, DEBUG=False):
         try:
             data = raw_data[0][0]['utterance'].split()
             if DEBUG: print data
-            if data[0].lower() == 'cyclops':
+            if data[0].lower() == 'cyclops' or data[0].lower() == 'psy' or data[0].lower() == 'si':
                 return data
                 break
+            if data[0].lower() == 'stop':
+                cmds.Walk(DEBUG=DEBUG).stop()
         except:
             pass
     
