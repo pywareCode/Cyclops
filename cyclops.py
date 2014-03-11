@@ -33,7 +33,7 @@ def Cyclops(DEBUG=False):
         elif cmd[0] == 'set' and cmd[1] == 'down':
             cmds.Arm(cmd, DEBUG).setdown()
         elif cmd[0] == 'where':
-            master_cmd = 'where'
+            cmds.Where(cmd, DEBUG)
         elif cmd[0] == 'take':
             master_cmd = 'take'
         elif cmd[0] == 'set':

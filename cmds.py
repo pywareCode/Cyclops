@@ -146,6 +146,24 @@ class Arm():
 
     def setdown(self):
         print 'Setting down ' + self.cmd[-1]
+
+#Move onto location functions
+class Where():
+    def __init__(self, cmd, DEBUG=False):
+        self.cmd = cmd
+        self.DEBUG = DEBUG
+        self.cmd.pop(0)
+        if len(self.cmd) != 0:
+            if self.cmd[-1].lower() == 'i':
+                self.here()
+            else:
+                self.find()
+
+    def here(self):
+        print 'GPS location module not added. here() called.'
+
+    def find(self):
+        print 'GPS location module not added. find() called.'
             
                 
     
