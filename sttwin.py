@@ -179,7 +179,6 @@ def stt_google_wav(audio_fname):
         except:
             print 'Error deleting file...'
             time.sleep(5)
-            os.remove(filename)
 
     return res
 

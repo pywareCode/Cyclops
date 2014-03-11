@@ -29,9 +29,9 @@ def Cyclops(DEBUG=False):
         elif cmd[0] == 'stop':
             cmds.Walk(cmd, DEBUG).stop()
         elif cmd[0] == 'pickup' or cmd[0] == 'pick' and cmd[1] == 'up':
-            master_cmd = 'pickup'
+            cmds.Arm(cmd, DEBUG).pickup()
         elif cmd[0] == 'set' and cmd[1] == 'down':
-            master_cmd = 'set down'
+            cmds.Arm(cmd, DEBUG).setdown()
         elif cmd[0] == 'where':
             master_cmd = 'where'
         elif cmd[0] == 'take':

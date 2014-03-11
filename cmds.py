@@ -131,6 +131,21 @@ class Walk():
 
     def stop(self):
         print 'Stopping'      
+
+#Move onto arm functions
+class Arm():
+    def __init__(self, cmd, DEBUG=False):
+        self.cmd = cmd
+        self.DEBUG = DEBUG
+
+    def pickup(self):
+        try:
+            print 'Picking up ' + self.cmd[-1]
+        except:
+            print 'Please name object'
+
+    def setdown(self):
+        print 'Setting down ' + self.cmd[-1]
             
                 
     
