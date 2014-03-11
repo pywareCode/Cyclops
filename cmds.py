@@ -164,6 +164,26 @@ class Where():
 
     def find(self):
         print 'GPS location module not added. find() called.'
+
+class Take():
+    def __init__(self, cmd, DEBUG=False):
+        self.cmd = cmd
+        self.DEBUG = DEBUG
+        self.cmd.pop(0)
+        if len(self.cmd) != 0:
+            if self.cmd[0].lower() == 'picture':
+                self.pic()
+            if self.cmd[0].lower() == 'video':
+                self.video()
+
+    def pic(self):
+        print 'Taking Picture'
+
+    def video(self):
+        try:
+            print 'Recording video for ' + self.cmd[2] + ' seconds.'
+        except:
+            print 'Please specify video length.'
             
                 
     
