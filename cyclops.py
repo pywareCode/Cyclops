@@ -39,7 +39,7 @@ def Cyclops(DEBUG=False):
         elif cmd[0] == 'set':
             master_cmd = 'set'
         elif cmd[0] == 'tell':
-            master_cmd = 'tell'
+            cmds.Tell(cmd, DEBUG)
         elif cmd[0] == 'who':
             master_cmd = 'who'
         else:

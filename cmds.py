@@ -1,7 +1,8 @@
+# -*- coding: cp1252 -*-
 #Commands
 #By Tyler Spadgenske
 
-import datetime
+import datetime, time, random
 
 class What(object):
     def __init__(self, cmd, DEBUG=False):
@@ -184,6 +185,51 @@ class Take():
             print 'Recording video for ' + self.cmd[2] + ' seconds.'
         except:
             print 'Please specify video length.'
+
+class Tell():
+    def __init__(self, cmd, DEBUG=False):
+        self.cmd = cmd
+        self.DEBUG = DEBUG
+        self.cmd.pop(0)
+        self.cmd.pop(0)
+        self.cmd.pop(0)
+        if len(self.cmd) != 0:
+            if self.cmd[0].lower() == 'joke':
+                self.joke()
+            if self.cmd[0].lower() == 'riddle':
+                self.riddle()
+
+    def joke(self):
+        a = ['Canoe.', 'Canoe help me with my homework?']
+        b = ['Anee.', 'Anee one you like!']
+        c = ['Arfur.', 'Arfur got!']
+        d = ['Nana.', 'Nana your business.']
+        e = ['Ya.', 'Wow. You sure are excited to see me!']
+        f = ['Cows go', 'Cows don’t go who, they go moo!']
+        g = ['Etch.', 'Bless you!']
+
+        jokes = [a, b, c, d, e, f, g]
+        joke = random.choice(jokes)
+
+        print 'Knock Knock.'
+        time.sleep(4)
+        print joke[0]
+        time.sleep(4)
+        print joke[1]
+
+
+    def riddle(self):
+        a = 'What gets wetter and wetter the more it dries?'
+        b = 'You throw away the outside and cook the inside. Then you eat the outside and throw away the inside. What did you eat?'
+        c = 'What goes up and down the stairs without moving?'
+        d = 'What can you catch but not throw?'
+        e = 'I can run but not walk. Wherever I go, thought follows close behind. What am I?'
+        f = "What's black and white and red all over?"
+        g = 'What goes around the world but stays in a corner?'
+
+        riddles = [a, b, c, d, e, f, g]
+        riddle = random.choice(riddles)
+        print riddle
             
                 
     
