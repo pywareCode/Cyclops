@@ -9,4 +9,4 @@ def say(message='Sorry...... I do not understand.'):
  
 # call main
 if __name__ == '__main__':
-  say()
+  say(raw_input("Text:" ))
