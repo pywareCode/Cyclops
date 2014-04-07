@@ -5,7 +5,7 @@ DEBUG = True
 import getcmd, cmds, sttwin
 
 def Cyclops(DEBUG=False):
-    THRESHOLD = sttwin.audio_int()
+    THRESHOLD = 16000
     #Main loop
     while True:
         print

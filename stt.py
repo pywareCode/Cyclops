@@ -168,10 +168,10 @@ def stt_google_wav(audio_fname):
 
     req = urllib2.Request(GOOGLE_SPEECH_URL, data=flac_cont, headers=hrs)
     print "Sending request to Google TTS"
-    #print "response", response
     try:
         p = urllib2.urlopen(req)
         response = p.read()
+	print response
         res = eval(response)['hypotheses']
     except:
         print "Couldn't parse service response"
@@ -184,6 +184,6 @@ def stt_google_wav(audio_fname):
 
 
 if(__name__ == '__main__'):
-    listen_for_speech()  # listen to mic.
+    stt_google_wav(raw_input("Filename >>")) # listen to mic.
     #print stt_google_wav('hello.flac')  # translate audio file
     #audio_int()  # To measure your mic levels
