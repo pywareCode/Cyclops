@@ -18,7 +18,7 @@ FLAC_CONV = 'c:\\FLAC\\flac.exe '  # Path to flac.exe for wav to flac coversion.
 CHUNK = 1024  # CHUNKS of bytes to read each time from mic
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
-RATE = 16000
+RATE = 10000
 THRESHOLD = 3000  # The threshold intensity that defines silence
                   # and noise signal (an int. lower than THRESHOLD is silence).
 
