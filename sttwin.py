@@ -18,15 +18,15 @@ FLAC_CONV = 'c:\\FLAC\\flac.exe '  # Path to flac.exe for wav to flac coversion.
 CHUNK = 1024  # CHUNKS of bytes to read each time from mic
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
-RATE = 10000
+RATE = 16000
 THRESHOLD = 3000  # The threshold intensity that defines silence
                   # and noise signal (an int. lower than THRESHOLD is silence).
 
-SILENCE_LIMIT = 3  # Silence limit in seconds. The max ammount of seconds where
+SILENCE_LIMIT = 1  # Silence limit in seconds. The max ammount of seconds where
                    # only silence is recorded. When this time passes the
                    # recording finishes and the file is delivered.
 
-PREV_AUDIO = 0.5  # Previous audio (in seconds) to prepend. When noise
+PREV_AUDIO = 1  # Previous audio (in seconds) to prepend. When noise
                   # is detected, how much of previously recorded audio is
                   # prepended. This helps to prevent chopping the beggining
                   # of the phrase.

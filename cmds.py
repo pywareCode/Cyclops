@@ -1,4 +1,4 @@
-# -*- coding: cp1252 -*-
+# -*- coding: utf-8 -*-
 #Commands
 #By Tyler Spadgenske
 
@@ -205,7 +205,7 @@ class Tell():
         c = ['Arfur.', 'Arfur got!']
         d = ['Nana.', 'Nana your business.']
         e = ['Ya.', 'Wow. You sure are excited to see me!']
-        f = ['Cows go', 'Cows don’t go who, they go moo!']
+        f = ['Cows go', 'Cows donâ€™t go who, they go moo!']
         g = ['Etch.', 'Bless you!']
 
         jokes = [a, b, c, d, e, f, g]

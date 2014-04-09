@@ -37,3 +37,4 @@ nosetests.xml
 *.wav
 *.pyc
 *.autosave
+*.flac

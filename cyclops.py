@@ -5,7 +5,7 @@ DEBUG = True
 import getcmd, cmds, sttwin
 
 def Cyclops(DEBUG=False):
-    THRESHOLD = 16000
+    THRESHOLD = sttwin.audio_int()
     #Main loop
     while True:
         print
@@ -23,7 +23,10 @@ def Cyclops(DEBUG=False):
             if DEBUG: print 'Not complete command'
         #Determin master command
         if cmd[0] == 'what':
-            cmds.What(cmd, DEBUG) 
+            cmds.What(cmd, DEBUG)
+        elif cmd[0] == 'walk' or cmd[0] == 'turn':
+            cmds.Walk(cmd, DEBUG)
+        elif cmd[0] == 'stop':
             cmds.Walk(cmd, DEBUG).stop()
         elif cmd[0] == 'pickup' or cmd[0] == 'pick' and cmd[1] == 'up':
             cmds.Arm(cmd, DEBUG).pickup()
@@ -34,11 +37,11 @@ def Cyclops(DEBUG=False):
         elif cmd[0] == 'take':
             cmds.Take(cmd, DEBUG)
         elif cmd[0] == 'set':
-            master_cmd = 'set'
+            pass #TODO
         elif cmd[0] == 'tell':
             cmds.Tell(cmd, DEBUG)
         elif cmd[0] == 'who':
-            master_cmd = 'who'
+            pass #TODO
         else:
             if DEBUG: print 'Not valid command'
             
