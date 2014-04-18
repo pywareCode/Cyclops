@@ -1,17 +1,21 @@
 #Get Command
 #By Tyler Spadgenske
-import sttwin, cmds
+import mic, tts, time
 
-def get(THRESHOLD, DEBUG=False):
+def get():
+    microphone = mic.Mic(lmd='models/lm.lm', dictd='models/dic.dic',
+                     lmd_persona='models/waitlm.lm', dictd_persona='models/waitdic.dic')
+    print 'Class created...'
+    time.sleep(3)
     while True:
-        raw_data = sttwin.listen_for_speech(threshold=THRESHOLD)
-        try:
-            data = raw_data[0][0]['utterance'].split()
-            if data[0].lower() == 'cyclops' or data[0].lower() == 'psy' or data[0].lower() == 'si':
-                return data
+        while True:
+            word = microphone.passiveListen('cyclops')
+            if word[1].lower() == 'cyclops':
                 break
-            if data[0].lower() == 'stop':
-                cmds.Walk(DEBUG=DEBUG).stop()
-        except:
-            pass
+        cmd = microphone.activeListen()
+        print 'COMMAND: ', cmd
+        return cmd
+if __name__ == '__main__':
+    get()
+        
     

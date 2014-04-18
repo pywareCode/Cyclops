@@ -1,0 +1,72 @@
+Language model created by QuickLM on Thu Apr 17 12:40:30 EDT 2014
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 13 sentences and 16 words
+
+\data\
+ngram 1=16
+ngram 2=27
+ngram 3=14
+
+\1-grams:
+-0.7891 </s> -0.3010
+-0.7891 <s> -0.2240
+-1.9031 BACK -0.2240
+-1.9031 CYCLOPS -0.2240
+-1.9031 DUMB -0.2240
+-1.9031 EAT -0.2240
+-1.9031 HERE -0.2240
+-1.9031 IS -0.2240
+-1.9031 KILL -0.2240
+-1.9031 NO -0.2240
+-1.9031 NOW -0.2240
+-1.9031 SEND -0.2240
+-1.9031 WHAT -0.2240
+-1.9031 YES -0.2240
+
+\2-grams:
+-1.4150 <s> CYCLOPS 0.0000
+-1.4150 <s> DUMB 0.0000
+-1.4150 <s> EAT 0.0000
+-1.4150 <s> HERE 0.0000
+-1.4150 <s> IS 0.0000
+-1.4150 <s> KILL 0.0000
+-1.4150 <s> NO 0.0000
+-1.4150 <s> NOW 0.0000
+-1.4150 <s> SEND 0.0000
+-1.4150 <s> WHAT 0.0000
+-1.4150 <s> YES 0.0000
+-0.3010 BACK </s> -0.3010
+-0.3010 CYCLOPS </s> -0.3010
+-0.3010 DUMB </s> -0.3010
+-0.3010 EAT </s> -0.3010
+-0.3010 HERE </s> -0.3010
+-0.3010 IS </s> -0.3010
+-0.3010 KILL </s> -0.3010
+-0.3010 NO </s> -0.3010
+-0.3010 NOW </s> -0.3010
+-0.3010 SEND </s> -0.3010
+-0.3010 WHAT </s> -0.3010
+-0.3010 YES </s> -0.3010
+
+\3-grams:
+-0.3010 <s> CYCLOPS </s>
+-0.3010 <s> DUMB </s>
+-0.3010 <s> EAT </s>
+-0.3010 <s> HERE </s>
+-0.3010 <s> IS </s>
+-0.3010 <s> KILL </s>
+-0.3010 <s> NO </s>
+-0.3010 <s> NOW </s>
+-0.3010 <s> SEND </s>
+-0.3010 <s> WHAT </s>
+-0.3010 <s> YES </s>
+-0.3010 A BACK </s>
+
+\end\

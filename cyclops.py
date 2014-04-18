@@ -2,25 +2,25 @@
 #By Tyler Spadgenske
 DEBUG = True
 
-import getcmd, cmds, sttwin
+import getcmd, cmds
+from tts import say
 
 def Cyclops(DEBUG=False):
-    THRESHOLD = sttwin.audio_int()
     #Main loop
+    say('Hello. My name is Cyclops. Please wait while my system starts up.')
     while True:
         print
         #Get the command and convert it to a list
-        cmd = getcmd.get(THRESHOLD, True)
+        cmd = getcmd.get().split()
         if DEBUG: print 'COMMAND:', cmd
 
-        cmd.pop(0)
         num = 0
         for word in cmd:
             cmd[num] = word.lower()
             num += 1
         if len(cmd) == 0:
             cmd.append('')
-            if DEBUG: print 'Not complete command'
+            say('Not complete command')
         #Determin master command
         if cmd[0] == 'what':
             cmds.What(cmd, DEBUG)
@@ -43,7 +43,7 @@ def Cyclops(DEBUG=False):
         elif cmd[0] == 'who':
             pass #TODO
         else:
-            if DEBUG: print 'Not valid command'
+            say('Not valid command')
             
             
 Cyclops(DEBUG=DEBUG)

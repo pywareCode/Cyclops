@@ -3,6 +3,7 @@
 #By Tyler Spadgenske
 
 import datetime, time, random
+from tts import say
 
 class What(object):
     def __init__(self, cmd, DEBUG=False):
@@ -59,7 +60,7 @@ class What(object):
         else:
             for i in range(0, 2):
                 self.cmd.append(None)
-            if self.DEBUG: print 'Invalid Command'
+            say('Invalid Command')
 
         #Solve problem
         self.answer = None
@@ -83,23 +84,23 @@ class What(object):
         #Say time if selected command
         if self.cmd[0].lower() == 'time':
             time = str(self.raw_time[1])
-            if self.DEBUG: print 'It is ' + time[0] + time[1] + time[2] + time[3] + time[4] + ' AM.'
+            say('It is ' + time[0] + time[1] + time[2] + time[3] + time[4] + ' AM.')
         #Say day if selected command
         if self.cmd[0].lower() == 'day':
             time = str(self.raw_time[0])
             month = self.get_month(time[5], time[6])
             
-            if self.DEBUG: print 'Today is ' + month + ' ' + time[-2] + time[-1] + ', ' + time[0] + time[1] + time[2] + time[3]
+            say('Today is ' + month + ' ' + time[-2] + time[-1] + ', ' + time[0] + time[1] + time[2] + time[3])
 
     def me(self):
         if self.cmd[0] == 'name':
-            print 'My name is Cyclops of course.'
+            say('My name is Cyclops of course.')
         if self.cmd[0] == 'phone':
-            print "I don't think I should tell you that."
+            say("I don't think I should tell you that.")
         if self.cmd[0] == 'email':
-            print 'My email is cyclopsrobot@gmail.com.'
+            say('My email is cyclopsrobot@gmail.com.')
         if self.cmd[0] == 'problem':
-            print "Whatever it is, I don't care."
+            say("Whatever it is, I don't care.")
 
 #Move onto walking functions
 class Walk():
@@ -119,19 +120,19 @@ class Walk():
                 self.right()
 
     def forward(self):
-        print 'Walking Forward'
+        say('Walking Forward')
 
     def backward(self):
-        print 'Walking Backward'
+        say('Walking Backward')
 
     def left(self):
-        print 'Turning left'
+        say('Turning left')
 
     def right(self):
-        print 'Turning right'
+        say('Turning right')
 
     def stop(self):
-        print 'Stopping'      
+        say('Stopping')    
 
 #Move onto arm functions
 class Arm():
@@ -141,12 +142,12 @@ class Arm():
 
     def pickup(self):
         try:
-            print 'Picking up ' + self.cmd[-1]
+            say('Picking up ' + self.cmd[-1])
         except:
-            print 'Please name object'
+            say('Please name object')
 
     def setdown(self):
-        print 'Setting down ' + self.cmd[-1]
+        say('Setting down ' + self.cmd[-1])
 
 #Move onto location functions
 class Where():
@@ -161,10 +162,10 @@ class Where():
                 self.find()
 
     def here(self):
-        print 'GPS location module not added. here() called.'
+        say('GPS location module not added. here() called.')
 
     def find(self):
-        print 'GPS location module not added. find() called.'
+        say('GPS location module not added. find() called.')
 
 class Take():
     def __init__(self, cmd, DEBUG=False):
@@ -178,13 +179,13 @@ class Take():
                 self.video()
 
     def pic(self):
-        print 'Taking Picture'
+        say('Taking Picture')
 
     def video(self):
         try:
-            print 'Recording video for ' + self.cmd[2] + ' seconds.'
+            say('Recording video for ' + self.cmd[2] + ' seconds.')
         except:
-            print 'Please specify video length.'
+            say('Please specify video length.')
 
 class Tell():
     def __init__(self, cmd, DEBUG=False):
@@ -211,11 +212,11 @@ class Tell():
         jokes = [a, b, c, d, e, f, g]
         joke = random.choice(jokes)
 
-        print 'Knock Knock.'
+        say('Knock Knock.')
         time.sleep(4)
-        print joke[0]
+        say(joke[0])
         time.sleep(4)
-        print joke[1]
+        say(joke[1])
 
 
     def riddle(self):
@@ -229,7 +230,7 @@ class Tell():
 
         riddles = [a, b, c, d, e, f, g]
         riddle = random.choice(riddles)
-        print riddle
+        say(riddle)
             
                 
     
