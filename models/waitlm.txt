@@ -1,0 +1,69 @@
+Language model created by QuickLM on Tue May 13 16:31:14 EDT 2014
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 11 sentences and 13 words
+
+\data\
+ngram 1=13
+ngram 2=22
+ngram 3=11
+
+\1-grams:
+-0.7782 </s> -0.3010
+-0.7782 <s> -0.2218
+-1.8195 ANDY -0.2218
+-1.8195 BLOOD -0.2218
+-1.8195 DEATH -0.2218
+-1.8195 DUDE -0.2218
+-1.8195 DUMB -0.2218
+-1.8195 EYE -0.2218
+-1.8195 GOD -0.2218
+-1.8195 MAN -0.2218
+-1.8195 TOAD -0.2218
+-1.8195 WHAT -0.2218
+-1.8195 YO -0.2218
+
+\2-grams:
+-1.3424 <s> ANDY 0.0000
+-1.3424 <s> BLOOD 0.0000
+-1.3424 <s> DEATH 0.0000
+-1.3424 <s> DUDE 0.0000
+-1.3424 <s> DUMB 0.0000
+-1.3424 <s> EYE 0.0000
+-1.3424 <s> GOD 0.0000
+-1.3424 <s> MAN 0.0000
+-1.3424 <s> TOAD 0.0000
+-1.3424 <s> WHAT 0.0000
+-1.3424 <s> YO 0.0000
+-0.3010 ANDY </s> -0.3010
+-0.3010 BLOOD </s> -0.3010
+-0.3010 DEATH </s> -0.3010
+-0.3010 DUDE </s> -0.3010
+-0.3010 DUMB </s> -0.3010
+-0.3010 EYE </s> -0.3010
+-0.3010 GOD </s> -0.3010
+-0.3010 MAN </s> -0.3010
+-0.3010 TOAD </s> -0.3010
+-0.3010 WHAT </s> -0.3010
+-0.3010 YO </s> -0.3010
+
+\3-grams:
+-0.3010 <s> ANDY </s>
+-0.3010 <s> BLOOD </s>
+-0.3010 <s> DEATH </s>
+-0.3010 <s> DUDE </s>
+-0.3010 <s> DUMB </s>
+-0.3010 <s> EYE </s>
+-0.3010 <s> GOD </s>
+-0.3010 <s> MAN </s>
+-0.3010 <s> TOAD </s>
+-0.3010 <s> WHAT </s>
+-0.3010 <s> YO </s>
+
+\end\
