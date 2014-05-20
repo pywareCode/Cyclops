@@ -9,8 +9,8 @@ def get():
     time.sleep(3)
     while True:
         while True:
-            word = microphone.passiveListen('cyclops')
-            if word[1].lower() == 'cyclops':
+            word = microphone.passiveListen('andy')
+            if word[1].lower() == 'andy':
                 break
         cmd = microphone.activeListen()
         print 'COMMAND: ', cmd

@@ -67,7 +67,7 @@ class Mic:
             result = self.speechRec.get_hyp()
 
         print "==================="
-        print "CYCLOPS: " + result[0]
+        print "ANDY: " + result[0]
         print "==================="
 
         return result[0]
@@ -134,7 +134,7 @@ class Mic:
         CHUNK = 1024
 
         # number of seconds to allow to establish threshold
-        THRESHOLD_TIME = 1
+        THRESHOLD_TIME = 3
 
         # number of seconds to listen before forcing restart
         LISTEN_TIME = 10
