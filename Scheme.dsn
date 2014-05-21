@@ -19,16 +19,6 @@ download the executable.-->
 			<DATE>4/30/2014</DATE>
 			<GRID spacing='100.00000' snap='1'/>
 		</DETAILS>
-		<FONT id='0'>
-			<HEIGHT>-13</HEIGHT>
-			<WIDTH>6</WIDTH>
-			<WEIGHT>400</WEIGHT>
-			<ITALIC>0</ITALIC>
-			<UNDERLINE>0</UNDERLINE>
-			<STRIKEOUT>0</STRIKEOUT>
-			<CHARSET>0</CHARSET>
-			<FACENAME>Arial</FACENAME>
-		</FONT>
 		<FONT id='1'>
 			<HEIGHT>-10</HEIGHT>
 			<WIDTH>0</WIDTH>
@@ -59,6 +49,16 @@ download the executable.-->
 			<CHARSET>0</CHARSET>
 			<FACENAME>Arial</FACENAME>
 		</FONT>
+		<FONT id='5'>
+			<HEIGHT>-13</HEIGHT>
+			<WIDTH>6</WIDTH>
+			<WEIGHT>400</WEIGHT>
+			<ITALIC>0</ITALIC>
+			<UNDERLINE>0</UNDERLINE>
+			<STRIKEOUT>0</STRIKEOUT>
+			<CHARSET>0</CHARSET>
+			<FACENAME>Arial</FACENAME>
+		</FONT>
 		<STYLE id='0'>
 			<STYLE>0</STYLE>
 			<COLOR>000000</COLOR>
@@ -69,29 +69,24 @@ download the executable.-->
 			<COLOR>0000FF</COLOR>
 			<THICKNESS>1</THICKNESS>
 		</STYLE>
-		<STYLE id='4'>
+		<STYLE id='3'>
 			<STYLE>0</STYLE>
 			<COLOR>4080FF</COLOR>
 			<THICKNESS>1</THICKNESS>
 		</STYLE>
-		<STYLE id='5'>
+		<STYLE id='4'>
 			<STYLE>0</STYLE>
 			<COLOR>80FFFF</COLOR>
 			<THICKNESS>1</THICKNESS>
 		</STYLE>
-		<STYLE id='7'>
-			<STYLE>0</STYLE>
-			<COLOR>000000</COLOR>
-			<THICKNESS>1</THICKNESS>
-		</STYLE>
-		<STYLE id='8'>
+		<STYLE id='6'>
 			<STYLE>0</STYLE>
 			<COLOR>80FF80</COLOR>
 			<THICKNESS>1</THICKNESS>
 		</STYLE>
-		<STYLE id='9'>
+		<STYLE id='8'>
 			<STYLE>0</STYLE>
-			<COLOR>0000FF</COLOR>
+			<COLOR>000000</COLOR>
 			<THICKNESS>1</THICKNESS>
 		</STYLE>
 		<FILL id='0'>
@@ -226,12 +221,12 @@ download the executable.-->
 			<REF_POINT power='0' part='0' pos='32.00000,27.00000'/>
 			<TinyCAD>
 				<WIRE a='21.40000,23.00000' b='21.40000,22.00000'/>
-				<RECTANGLE a='27.40000,24.00000' b='29.40000,22.00000' style='7' fill='1'/>
-				<RECTANGLE a='23.40000,24.00000' b='21.40000,22.00000' style='7' fill='1'/>
+				<RECTANGLE a='27.40000,24.00000' b='29.40000,22.00000' style='8' fill='1'/>
+				<RECTANGLE a='23.40000,24.00000' b='21.40000,22.00000' style='8' fill='1'/>
 				<PIN pos='32.00000,23.00000' which='0' elec='4' direction='2' part='0' number='1' show='0' length='15' number_pos='0' centre_name='0'></PIN>
 				<PIN pos='19.00000,23.00000' which='0' elec='4' direction='3' part='0' number='2' show='0' length='15' number_pos='0' centre_name='0'></PIN>
-				<ELLIPSE a='22.40000,26.00000' b='28.40000,20.00000' style='7' fill='2'/>
-				<TEXT pos='24.20000,24.60000' direction='3' font='4' color='000000'>M</TEXT>
+				<ELLIPSE a='22.40000,26.00000' b='28.40000,20.00000' style='8' fill='2'/>
+				<TEXT pos='24.20000,24.60000' direction='3' font='5' color='000000'>M</TEXT>
 			</TinyCAD>
 		</SYMBOLDEF>
 		<SYMBOLDEF id='2'>
@@ -256,8 +251,8 @@ download the executable.-->
 			<REF_POINT power='0' part='0' pos='116.00000,90.00000'/>
 			<REF_POINT power='1' part='0' pos='116.00000,90.00000'/>
 			<TinyCAD>
-				<RECTANGLE a='84.00000,48.00000' b='108.00000,66.00000' style='7' fill='0'/>
-				<LABEL pos='84.00000,46.00000' direction='3' font='4' color='208000' style='0'>l298N Motor Driver</LABEL>
+				<RECTANGLE a='84.00000,48.00000' b='108.00000,66.00000' style='8' fill='0'/>
+				<LABEL pos='84.00000,46.00000' direction='3' font='5' color='208000' style='0'>l298N Motor Driver</LABEL>
 				<PIN pos='84.00000,58.00000' which='0' elec='0' direction='2' part='0' number='1' show='1' length='30' number_pos='0' centre_name='0'>OUT1</PIN>
 				<PIN pos='84.00000,62.00000' which='0' elec='0' direction='2' part='0' number='2' show='1' length='30' number_pos='0' centre_name='0'>OUT2</PIN>
 				<PIN pos='86.00000,66.00000' which='0' elec='0' direction='1' part='0' number='3' show='1' length='30' number_pos='0' centre_name='0'>MOTOR POWER</PIN>
@@ -305,7 +300,7 @@ download the executable.-->
 			</FIELD>
 			<REF_POINT power='0' part='0' pos='82.00000,132.00000'/>
 			<TinyCAD>
-				<RECTANGLE a='70.00000,28.00000' b='74.00000,132.00000' style='7' fill='0'/>
+				<RECTANGLE a='70.00000,28.00000' b='74.00000,132.00000' style='8' fill='0'/>
 				<PIN pos='74.00000,30.00000' which='0' elec='0' direction='3' part='0' number='1' show='3' length='30' number_pos='0' centre_name='0'>3V3</PIN>
 				<PIN pos='74.00000,34.00000' which='0' elec='0' direction='3' part='0' number='2' show='3' length='30' number_pos='0' centre_name='0'>5V</PIN>
 				<PIN pos='74.00000,38.00000' which='0' elec='0' direction='3' part='0' number='3' show='3' length='30' number_pos='0' centre_name='0'>SDA</PIN>
@@ -362,8 +357,8 @@ download the executable.-->
 			</FIELD>
 			<REF_POINT power='0' part='0' pos='108.00000,64.00000'/>
 			<TinyCAD>
-				<RECTANGLE a='82.00000,36.00000' b='88.00000,52.00000' style='7' fill='0'/>
-				<LABEL pos='92.00000,46.00000' direction='3' font='4' color='208000' style='0'>5V Regulator</LABEL>
+				<RECTANGLE a='82.00000,36.00000' b='88.00000,52.00000' style='8' fill='0'/>
+				<LABEL pos='92.00000,46.00000' direction='3' font='5' color='208000' style='0'>5V Regulator</LABEL>
 				<PIN pos='86.00000,36.00000' which='0' elec='0' direction='0' part='0' number='1' show='3' length='30' number_pos='0' centre_name='0'>Out +</PIN>
 				<PIN pos='84.00000,36.00000' which='0' elec='0' direction='0' part='0' number='2' show='1' length='30' number_pos='0' centre_name='0'>Out --</PIN>
 				<PIN pos='86.00000,52.00000' which='0' elec='0' direction='1' part='0' number='3' show='1' length='30' number_pos='0' centre_name='0'>In +</PIN>
@@ -398,8 +393,8 @@ download the executable.-->
 			</FIELD>
 			<REF_POINT power='0' part='0' pos='112.00000,60.00000'/>
 			<TinyCAD>
-				<RECTANGLE a='80.00000,46.00000' b='112.00000,60.00000' style='7' fill='0'/>
-				<LABEL pos='82.00000,54.00000' direction='3' font='4' color='208000' style='0'>11.1 Volt Lipo Battery</LABEL>
+				<RECTANGLE a='80.00000,46.00000' b='112.00000,60.00000' style='8' fill='0'/>
+				<LABEL pos='82.00000,54.00000' direction='3' font='5' color='208000' style='0'>11.1 Volt Lipo Battery</LABEL>
 				<PIN pos='80.00000,50.00000' which='0' elec='0' direction='2' part='0' number='1' show='1' length='30' number_pos='0' centre_name='0'>Plus</PIN>
 				<PIN pos='80.00000,56.00000' which='0' elec='0' direction='2' part='0' number='2' show='1' length='30' number_pos='0' centre_name='0'>Minus</PIN>
 			</TinyCAD>
@@ -432,7 +427,7 @@ download the executable.-->
 			</FIELD>
 			<REF_POINT power='0' part='0' pos='98.00000,78.00000'/>
 			<TinyCAD>
-				<RECTANGLE a='66.00000,20.00000' b='90.00000,78.00000' style='7' fill='0'/>
+				<RECTANGLE a='66.00000,20.00000' b='90.00000,78.00000' style='8' fill='0'/>
 				<PIN pos='66.00000,24.00000' which='0' elec='0' direction='2' part='0' number='1' show='3' length='30' number_pos='0' centre_name='0'>GPB0</PIN>
 				<PIN pos='66.00000,28.00000' which='0' elec='0' direction='2' part='0' number='2' show='3' length='30' number_pos='0' centre_name='0'>GPB1</PIN>
 				<PIN pos='66.00000,32.00000' which='0' elec='0' direction='2' part='0' number='3' show='3' length='30' number_pos='0' centre_name='0'>GPB2</PIN>
@@ -461,7 +456,7 @@ download the executable.-->
 				<PIN pos='90.00000,32.00000' which='0' elec='0' direction='3' part='0' number='26' show='3' length='30' number_pos='0' centre_name='0'>GPA5</PIN>
 				<PIN pos='90.00000,28.00000' which='0' elec='0' direction='3' part='0' number='27' show='3' length='30' number_pos='0' centre_name='0'>GPA6</PIN>
 				<PIN pos='90.00000,24.00000' which='0' elec='0' direction='3' part='0' number='28' show='3' length='30' number_pos='0' centre_name='0'>GPA7</PIN>
-				<LABEL pos='70.00000,46.00000' direction='3' font='4' color='208000' style='0'>MCP23017</LABEL>
+				<LABEL pos='70.00000,46.00000' direction='3' font='5' color='208000' style='0'>MCP23017</LABEL>
 			</TinyCAD>
 		</SYMBOLDEF>
 		<SYMBOLDEF id='7'>
@@ -492,7 +487,7 @@ download the executable.-->
 			</FIELD>
 			<REF_POINT power='0' part='0' pos='100.00000,60.00000'/>
 			<TinyCAD>
-				<RECTANGLE a='80.00000,28.00000' b='92.00000,60.00000' style='7' fill='0'/>
+				<RECTANGLE a='80.00000,28.00000' b='92.00000,60.00000' style='8' fill='0'/>
 				<PIN pos='80.00000,30.00000' which='0' elec='0' direction='2' part='0' number='1' show='3' length='30' number_pos='0' centre_name='0'>EN1</PIN>
 				<PIN pos='80.00000,34.00000' which='0' elec='0' direction='2' part='0' number='2' show='3' length='30' number_pos='0' centre_name='0'>IN1</PIN>
 				<PIN pos='80.00000,38.00000' which='0' elec='0' direction='2' part='0' number='3' show='3' length='30' number_pos='0' centre_name='0'>OUT1</PIN>
@@ -509,7 +504,7 @@ download the executable.-->
 				<PIN pos='92.00000,38.00000' which='0' elec='0' direction='3' part='0' number='14' show='3' length='30' number_pos='0' centre_name='0'>OUT4</PIN>
 				<PIN pos='92.00000,34.00000' which='0' elec='0' direction='3' part='0' number='15' show='3' length='30' number_pos='0' centre_name='0'>IN4</PIN>
 				<PIN pos='92.00000,30.00000' which='0' elec='0' direction='3' part='0' number='16' show='3' length='30' number_pos='0' centre_name='0'>+V</PIN>
-				<LABEL pos='82.00000,34.00000' direction='3' font='3' color='208000' style='0'>L293D</LABEL>
+				<LABEL pos='82.00000,34.00000' direction='3' font='4' color='208000' style='0'>L293D</LABEL>
 			</TinyCAD>
 		</SYMBOLDEF>
 		<SYMBOLDEF id='8'>
@@ -632,12 +627,12 @@ download the executable.-->
 			<REF_POINT power='0' part='0' pos='32.00000,27.00000'/>
 			<TinyCAD>
 				<WIRE a='21.40000,23.00000' b='21.40000,22.00000'/>
-				<RECTANGLE a='27.40000,24.00000' b='29.40000,22.00000' style='7' fill='1'/>
-				<RECTANGLE a='23.40000,24.00000' b='21.40000,22.00000' style='7' fill='1'/>
+				<RECTANGLE a='27.40000,24.00000' b='29.40000,22.00000' style='8' fill='1'/>
+				<RECTANGLE a='23.40000,24.00000' b='21.40000,22.00000' style='8' fill='1'/>
 				<PIN pos='32.00000,23.00000' which='0' elec='4' direction='2' part='0' number='1' show='0' length='15' number_pos='0' centre_name='0'></PIN>
 				<PIN pos='19.00000,23.00000' which='0' elec='4' direction='3' part='0' number='2' show='0' length='15' number_pos='0' centre_name='0'></PIN>
-				<ELLIPSE a='22.40000,26.00000' b='28.40000,20.00000' style='7' fill='2'/>
-				<TEXT pos='24.20000,24.60000' direction='3' font='3' color='000000'>M</TEXT>
+				<ELLIPSE a='22.40000,26.00000' b='28.40000,20.00000' style='8' fill='2'/>
+				<TEXT pos='24.20000,24.60000' direction='3' font='4' color='000000'>M</TEXT>
 			</TinyCAD>
 		</SYMBOLDEF>
 		<OPTIONS>
@@ -736,22 +731,22 @@ download the executable.-->
 			<FIELD type='1' description='Mouser Part' value='..' show='0' pos='-8.00000,38.00000'/>
 			<FIELD type='1' description='Cost' value='..' show='0' pos='-8.00000,40.40000'/>
 		</SYMBOL>
-		<WIRE style='4' a='116.00000,24.00000' b='122.00000,24.00000'/>
-		<WIRE style='4' a='122.00000,24.00000' b='122.00000,38.00000'/>
-		<WIRE style='4' a='122.00000,38.00000' b='128.00000,38.00000'/>
-		<WIRE style='4' a='116.00000,20.00000' b='128.00000,20.00000'/>
-		<WIRE style='4' a='128.00000,20.00000' b='128.00000,25.00000'/>
-		<WIRE style='4' a='150.00000,20.00000' b='138.00000,20.00000'/>
-		<WIRE style='4' a='138.00000,20.00000' b='138.00000,25.00000'/>
-		<WIRE style='4' a='138.00000,38.00000' b='144.00000,38.00000'/>
-		<WIRE style='4' a='144.00000,38.00000' b='144.00000,24.00000'/>
-		<WIRE style='4' a='144.00000,24.00000' b='150.00000,24.00000'/>
-		<WIRE style='4' a='174.00000,20.00000' b='188.00000,20.00000'/>
-		<WIRE style='4' a='188.00000,20.00000' b='188.00000,27.00000'/>
-		<WIRE style='4' a='174.00000,24.00000' b='182.00000,24.00000'/>
-		<WIRE style='4' a='182.00000,24.00000' b='182.00000,44.00000'/>
-		<WIRE style='4' a='182.00000,44.00000' b='188.00000,44.00000'/>
-		<WIRE style='4' a='188.00000,44.00000' b='188.00000,40.00000'/>
+		<WIRE style='3' a='116.00000,24.00000' b='122.00000,24.00000'/>
+		<WIRE style='3' a='122.00000,24.00000' b='122.00000,38.00000'/>
+		<WIRE style='3' a='122.00000,38.00000' b='128.00000,38.00000'/>
+		<WIRE style='3' a='116.00000,20.00000' b='128.00000,20.00000'/>
+		<WIRE style='3' a='128.00000,20.00000' b='128.00000,25.00000'/>
+		<WIRE style='3' a='150.00000,20.00000' b='138.00000,20.00000'/>
+		<WIRE style='3' a='138.00000,20.00000' b='138.00000,25.00000'/>
+		<WIRE style='3' a='138.00000,38.00000' b='144.00000,38.00000'/>
+		<WIRE style='3' a='144.00000,38.00000' b='144.00000,24.00000'/>
+		<WIRE style='3' a='144.00000,24.00000' b='150.00000,24.00000'/>
+		<WIRE style='3' a='174.00000,20.00000' b='188.00000,20.00000'/>
+		<WIRE style='3' a='188.00000,20.00000' b='188.00000,27.00000'/>
+		<WIRE style='3' a='174.00000,24.00000' b='182.00000,24.00000'/>
+		<WIRE style='3' a='182.00000,24.00000' b='182.00000,44.00000'/>
+		<WIRE style='3' a='182.00000,44.00000' b='188.00000,44.00000'/>
+		<WIRE style='3' a='188.00000,44.00000' b='188.00000,40.00000'/>
 		<SYMBOL id='1' pos='200.00000,40.00000' part='0' rotate='2' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='' show='0' pos='-8.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='Left Shoulder' show='1' pos='-6.00000,-22.00000'/>
@@ -772,11 +767,11 @@ download the executable.-->
 			<FIELD type='1' description='Mouser Part' value='..' show='0' pos='-8.00000,38.00000'/>
 			<FIELD type='1' description='Cost' value='..' show='0' pos='-8.00000,40.40000'/>
 		</SYMBOL>
-		<WIRE style='4' a='208.00000,20.00000' b='196.00000,20.00000'/>
-		<WIRE style='4' a='196.00000,20.00000' b='196.00000,27.00000'/>
-		<WIRE style='4' a='196.00000,40.00000' b='202.00000,40.00000'/>
-		<WIRE style='4' a='202.00000,40.00000' b='202.00000,24.00000'/>
-		<WIRE style='4' a='202.00000,24.00000' b='208.00000,24.00000'/>
+		<WIRE style='3' a='208.00000,20.00000' b='196.00000,20.00000'/>
+		<WIRE style='3' a='196.00000,20.00000' b='196.00000,27.00000'/>
+		<WIRE style='3' a='196.00000,40.00000' b='202.00000,40.00000'/>
+		<WIRE style='3' a='202.00000,40.00000' b='202.00000,24.00000'/>
+		<WIRE style='3' a='202.00000,24.00000' b='208.00000,24.00000'/>
 		<SYMBOL id='1' pos='76.00000,28.00000' part='0' rotate='2' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='M?' show='0' pos='-8.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='Left Leg' show='1' pos='-8.00000,-14.00000'/>
@@ -817,21 +812,21 @@ download the executable.-->
 			<FIELD type='1' description='Mouser Part' value='..' show='0' pos='-8.00000,38.00000'/>
 			<FIELD type='1' description='Cost' value='..' show='0' pos='-8.00000,40.40000'/>
 		</SYMBOL>
-		<WIRE style='4' a='232.00000,20.00000' b='244.00000,20.00000'/>
-		<WIRE style='4' a='244.00000,20.00000' b='244.00000,14.00000'/>
-		<WIRE style='4' a='244.00000,14.00000' b='252.00000,14.00000'/>
-		<WIRE style='4' a='252.00000,14.00000' b='252.00000,15.00000'/>
-		<WIRE style='4' a='232.00000,24.00000' b='242.00000,24.00000'/>
-		<WIRE style='4' a='242.00000,24.00000' b='242.00000,28.00000'/>
-		<WIRE style='4' a='242.00000,28.00000' b='252.00000,28.00000'/>
-		<WIRE style='4' a='92.00000,24.00000' b='82.00000,24.00000'/>
-		<WIRE style='4' a='82.00000,24.00000' b='82.00000,28.00000'/>
-		<WIRE style='4' a='82.00000,28.00000' b='72.00000,28.00000'/>
-		<WIRE style='4' a='72.00000,15.00000' b='86.00000,15.00000'/>
-		<WIRE style='4' a='86.00000,15.00000' b='86.00000,20.00000'/>
-		<WIRE style='4' a='86.00000,20.00000' b='90.00000,20.00000'/>
+		<WIRE style='3' a='232.00000,20.00000' b='244.00000,20.00000'/>
+		<WIRE style='3' a='244.00000,20.00000' b='244.00000,14.00000'/>
+		<WIRE style='3' a='244.00000,14.00000' b='252.00000,14.00000'/>
+		<WIRE style='3' a='252.00000,14.00000' b='252.00000,15.00000'/>
+		<WIRE style='3' a='232.00000,24.00000' b='242.00000,24.00000'/>
+		<WIRE style='3' a='242.00000,24.00000' b='242.00000,28.00000'/>
+		<WIRE style='3' a='242.00000,28.00000' b='252.00000,28.00000'/>
+		<WIRE style='3' a='92.00000,24.00000' b='82.00000,24.00000'/>
+		<WIRE style='3' a='82.00000,24.00000' b='82.00000,28.00000'/>
+		<WIRE style='3' a='82.00000,28.00000' b='72.00000,28.00000'/>
+		<WIRE style='3' a='72.00000,15.00000' b='86.00000,15.00000'/>
+		<WIRE style='3' a='86.00000,15.00000' b='86.00000,20.00000'/>
+		<WIRE style='3' a='86.00000,20.00000' b='90.00000,20.00000'/>
 		<WIRE style='0' a='98.00000,58.00000' b='98.00000,28.00000'/>
-		<WIRE style='0' a='130.00000,58.00000' b='156.00000,58.00000'/>
+		<WIRE style='0' a='98.00000,58.00000' b='156.00000,58.00000'/>
 		<WIRE style='0' a='156.00000,58.00000' b='156.00000,28.00000'/>
 		<WIRE style='0' a='204.00000,58.00000' b='214.00000,58.00000'/>
 		<WIRE style='0' a='214.00000,58.00000' b='214.00000,28.00000'/>
@@ -858,8 +853,8 @@ download the executable.-->
 			<FIELD type='1' description='Package' value='' show='0' pos='1.00000,-33.20000'/>
 		</SYMBOL>
 		<WIRE style='0' a='178.00000,72.00000' b='178.00000,64.00000'/>
-		<WIRE style='0' a='130.00000,64.00000' b='50.00000,64.00000'/>
-		<WIRE style='2' a='130.00000,44.00000' b='180.00000,44.00000'/>
+		<WIRE style='0' a='178.00000,64.00000' b='50.00000,64.00000'/>
+		<WIRE style='2' a='50.00000,44.00000' b='180.00000,44.00000'/>
 		<WIRE style='2' a='180.00000,44.00000' b='180.00000,72.00000'/>
 		<SYMBOL id='5' pos='220.00000,104.00000' part='0' rotate='6' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='0' description='Ref' value='' show='1' pos='-14.00000,2.00000'/>
@@ -894,12 +889,12 @@ download the executable.-->
 			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Package' value='' show='0' pos='1.00000,-51.20000'/>
 		</SYMBOL>
-		<WIRE style='5' a='50.00000,40.00000' b='66.00000,40.00000'/>
-		<WIRE style='5' a='66.00000,40.00000' b='66.00000,188.00000'/>
-		<WIRE style='5' a='66.00000,188.00000' b='86.00000,188.00000'/>
-		<WIRE style='5' a='50.00000,48.00000' b='68.00000,48.00000'/>
-		<WIRE style='5' a='68.00000,48.00000' b='68.00000,184.00000'/>
-		<WIRE style='5' a='68.00000,184.00000' b='86.00000,184.00000'/>
+		<WIRE style='4' a='50.00000,40.00000' b='66.00000,40.00000'/>
+		<WIRE style='4' a='66.00000,40.00000' b='66.00000,188.00000'/>
+		<WIRE style='4' a='66.00000,188.00000' b='86.00000,188.00000'/>
+		<WIRE style='4' a='50.00000,48.00000' b='68.00000,48.00000'/>
+		<WIRE style='4' a='68.00000,48.00000' b='68.00000,184.00000'/>
+		<WIRE style='4' a='68.00000,184.00000' b='86.00000,184.00000'/>
 		<WIRE style='0' a='62.00000,128.00000' b='50.00000,128.00000'/>
 		<WIRE style='2' a='72.00000,96.00000' b='50.00000,96.00000'/>
 		<WIRE style='0' a='126.00000,128.00000' b='126.00000,184.00000'/>
@@ -953,7 +948,7 @@ download the executable.-->
 		<WIRE style='2' a='184.00000,128.00000' b='154.00000,128.00000'/>
 		<WIRE style='2' a='154.00000,128.00000' b='154.00000,172.00000'/>
 		<WIRE style='2' a='154.00000,172.00000' b='170.00000,172.00000'/>
-		<WIRE style='4' a='170.00000,164.00000' b='146.00000,164.00000'/>
+		<WIRE style='3' a='170.00000,164.00000' b='146.00000,164.00000'/>
 		<SYMBOL id='8' pos='224.00000,138.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='M?' show='0' pos='1.00000,-3.60000'/>
 			<FIELD type='0' description='Name' value='Waist Motor' show='1' pos='1.00000,-6.00000'/>
@@ -974,18 +969,18 @@ download the executable.-->
 			<FIELD type='1' description='Mouser Part' value='..' show='0' pos='1.00000,32.40000'/>
 			<FIELD type='1' description='Cost' value='..' show='0' pos='1.00000,34.80000'/>
 		</SYMBOL>
-		<WIRE style='4' a='211.00000,134.00000' b='150.00000,134.00000'/>
-		<WIRE style='4' a='150.00000,134.00000' b='150.00000,152.00000'/>
-		<WIRE style='4' a='150.00000,152.00000' b='170.00000,152.00000'/>
-		<WIRE style='8' a='160.00000,26.00000' b='162.00000,26.00000'/>
-		<WIRE style='8' a='162.00000,26.00000' b='162.00000,28.00000'/>
-		<WIRE style='8' a='172.00000,26.00000' b='172.00000,28.00000'/>
-		<WIRE style='8' a='102.00000,26.00000' b='104.00000,26.00000'/>
-		<WIRE style='8' a='104.00000,26.00000' b='104.00000,28.00000'/>
-		<WIRE style='8' a='218.00000,26.00000' b='220.00000,26.00000'/>
-		<WIRE style='8' a='220.00000,26.00000' b='220.00000,28.00000'/>
-		<WIRE style='8' a='230.00000,26.00000' b='230.00000,28.00000'/>
-		<WIRE style='8' a='114.00000,26.00000' b='114.00000,28.00000'/>
+		<WIRE style='3' a='211.00000,134.00000' b='150.00000,134.00000'/>
+		<WIRE style='3' a='150.00000,134.00000' b='150.00000,152.00000'/>
+		<WIRE style='3' a='150.00000,152.00000' b='170.00000,152.00000'/>
+		<WIRE style='6' a='160.00000,26.00000' b='162.00000,26.00000'/>
+		<WIRE style='6' a='162.00000,26.00000' b='162.00000,28.00000'/>
+		<WIRE style='6' a='172.00000,26.00000' b='172.00000,28.00000'/>
+		<WIRE style='6' a='102.00000,26.00000' b='104.00000,26.00000'/>
+		<WIRE style='6' a='104.00000,26.00000' b='104.00000,28.00000'/>
+		<WIRE style='6' a='218.00000,26.00000' b='220.00000,26.00000'/>
+		<WIRE style='6' a='220.00000,26.00000' b='220.00000,28.00000'/>
+		<WIRE style='6' a='230.00000,26.00000' b='230.00000,28.00000'/>
+		<WIRE style='6' a='114.00000,26.00000' b='114.00000,28.00000'/>
 		<WIRE a='170.00000,168.00000' b='132.00000,168.00000'/>
 		<WIRE a='132.00000,168.00000' b='132.00000,164.00000'/>
 		<WIRE a='132.00000,164.00000' b='110.00000,164.00000'/>
@@ -1011,30 +1006,14 @@ download the executable.-->
 		<WIRE a='226.00000,120.00000' b='226.00000,28.00000'/>
 		<WIRE a='228.00000,124.00000' b='228.00000,28.00000'/>
 		<WIRE a='50.00000,124.00000' b='228.00000,124.00000'/>
-		<WIRE style='4' a='146.00000,164.00000' b='146.00000,140.00000'/>
-		<WIRE style='4' a='146.00000,140.00000' b='224.00000,140.00000'/>
-		<WIRE style='4' a='224.00000,140.00000' b='224.00000,134.00000'/>
-		<WIRE style='9' a='102.00000,28.00000' b='102.00000,52.00000'/>
-		<WIRE style='9' a='130.00000,52.00000' b='160.00000,52.00000'/>
-		<WIRE style='9' a='160.00000,52.00000' b='160.00000,28.00000'/>
-		<JUNCTION pos='160.00000,52.00000'/>
-		<WIRE style='9' a='160.00000,52.00000' b='218.00000,52.00000'/>
-		<WIRE style='9' a='218.00000,52.00000' b='218.00000,28.00000'/>
-		<JUNCTION pos='130.00000,44.00000'/>
-		<WIRE style='2' a='130.00000,44.00000' b='130.00000,52.00000'/>
-		<WIRE style='2' a='50.00000,44.00000' b='130.00000,44.00000'/>
-		<JUNCTION pos='130.00000,52.00000'/>
-		<WIRE style='9' a='102.00000,52.00000' b='130.00000,52.00000'/>
-		<JUNCTION pos='130.00000,58.00000'/>
-		<WIRE style='0' a='130.00000,58.00000' b='130.00000,64.00000'/>
-		<WIRE style='0' a='98.00000,58.00000' b='130.00000,58.00000'/>
-		<JUNCTION pos='130.00000,64.00000'/>
-		<WIRE style='0' a='178.00000,64.00000' b='130.00000,64.00000'/>
-		<TEXT pos='226.00000,156.00000' direction='3' font='0' color='0000FF'>Red: Power</TEXT>
-		<TEXT pos='226.00000,162.00000' direction='3' font='0' color='000000'>Black: Ground</TEXT>
-		<TEXT pos='226.00000,168.00000' direction='3' font='0' color='FF0000'>Blue: Control</TEXT>
-		<TEXT pos='248.00000,156.00000' direction='3' font='0' color='4080FF'>Orange: Motor</TEXT>
-		<TEXT pos='248.00000,168.00000' direction='3' font='0' color='80FFFF'>Yellow: I2C</TEXT>
-		<TEXT pos='248.00000,162.00000' direction='3' font='0' color='40FF00'>Green: Jumper</TEXT>
+		<WIRE style='3' a='146.00000,164.00000' b='146.00000,140.00000'/>
+		<WIRE style='3' a='146.00000,140.00000' b='224.00000,140.00000'/>
+		<WIRE style='3' a='224.00000,140.00000' b='224.00000,134.00000'/>
+		<TEXT pos='226.00000,156.00000' direction='3' font='3' color='0000FF'>Red: Power</TEXT>
+		<TEXT pos='226.00000,162.00000' direction='3' font='3' color='000000'>Black: Ground</TEXT>
+		<TEXT pos='226.00000,168.00000' direction='3' font='3' color='FF0000'>Blue: Control</TEXT>
+		<TEXT pos='248.00000,156.00000' direction='3' font='3' color='4080FF'>Orange: Motor</TEXT>
+		<TEXT pos='248.00000,168.00000' direction='3' font='3' color='80FFFF'>Yellow: I2C</TEXT>
+		<TEXT pos='248.00000,162.00000' direction='3' font='3' color='40FF00'>Green: Jumper</TEXT>
 	</TinyCAD>
 </TinyCADSheets>
