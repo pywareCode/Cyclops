@@ -41,7 +41,7 @@ def Cyclops(DEBUG=False):
         elif cmd[0] == 'tell':
             cmds.Tell(cmd, DEBUG)
         elif cmd[0] == 'who':
-            pass #TODO
+            cmds.Who(cmd, DEBUG)
         else:
             say('Not valid command')
             

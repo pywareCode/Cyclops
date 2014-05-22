@@ -4,6 +4,7 @@
 
 import datetime, time, random
 from tts import say
+from database import Database
 
 class What(object):
     def __init__(self, cmd, DEBUG=False):
@@ -231,6 +232,50 @@ class Tell():
         riddles = [a, b, c, d, e, f, g]
         riddle = random.choice(riddles)
         say(riddle)
+
+class Who():
+    def __init__(self, cmd, DEBUG=False):
+        self.cmd = cmd
+        self.database = Database()
+	if len(self.cmd) > 2:
+		self.cmd.pop(0)
+		self.cmd.pop(0)
+		self.get_info(self.cmd[0])
+	else:
+		say("I am sorry. I do not know who you are talking about.")
+		
+    def get_info(self, name):
+        name = name.lower()
+        name = name.capitalize()
+        self.color = Database().get_people_data(name, 'favorite_color')
+        self.iceCream = Database().get_people_data(name, 'favorite_ice_cream')
+        self.age = Database().get_people_data(name, 'age')
+        self.food = Database().get_people_data(name, 'favorite_food')
+    
+        if self.age == 'None':
+            self.age_string = 'I do not know how old ' + name + ' is. '
+        else:
+            self.age_string = name + ' is ' + self.age + ' years old. '
+
+        if self.color == 'None':
+            self.color_string = 'I do not know ' + name + 's favorite color. '
+        else:
+            self.color_string = name + 's favorite color is ' + self.color
+
+        if self.iceCream == 'None':
+            self.cream_string = 'I do not know ' + name + 's favorite ice cream.'
+        else:
+            self.cream_string = name + 's favorite ice cream is ' + self.iceCream
+
+        if self.food == 'None':
+            self.food_string = 'I do not know ' + name + 's favorite food.'
+        else:
+            self.food_string = name + 's favorite food is ' + self.food
+        
+        say(self.age_string)
+        say(self.color_string)
+        say(self.cream_string)
+        say(self.food_string)
             
                 
     

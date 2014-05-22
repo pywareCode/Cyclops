@@ -41,9 +41,9 @@ class Database():
 
         def get_people_data(self, target, data):
                 #Get data from database
-                query = ('SELECT id, first_name, favorite_color, favorite_ice_cream, age, image_path, last_seen, best_friend FROM people')
+                query = ('SELECT id, first_name, favorite_color, favorite_ice_cream, age, image_path, last_seen, favorite_food FROM people')
                 self.cursor.execute(query)
-                for id, first_name, favorite_color, favorite_ice_cream, age, image_path, last_seen, best_friend in self.cursor:
+                for id, first_name, favorite_color, favorite_ice_cream, age, image_path, last_seen, favorite_food in self.cursor:
 
                         #Setup data
                         self.name = str(first_name)
@@ -53,28 +53,28 @@ class Database():
                                 self.currentAge = str(age)
                                 self.image = str(image_path)
                                 self.seen = str(last_seen)
-                                self.bestie = str(best_friend)
+                                self.food = str(favorite_food)
 
                 #Return data wanted
                 if data == 'first_name':
                         return self.name
-                if data == 'favorite_color':
+                elif data == 'favorite_color':
                         return self.color
-                if data == 'favorite_ice_cream':
+                elif data == 'favorite_ice_cream':
                         return self.iceCream
-                if data == 'age':
+                elif data == 'age':
                         return self.currentAge
-                if data == 'image_path':
+                elif data == 'image_path':
                         return self.image
-                if data == 'last_seen':
+                elif data == 'last_seen':
                         return self.seen
-                if data == 'best_friend':
-                        return self.bestie
+                elif data == 'favorite_food':
+                        return self.food
                 else:
-                        return 'Invalid Input'
+                        return 'None'
 
                         
-   
-t = Database()
-test = t.get_people_data('Tyler','favorite_color')
-print test
+if __name__ == '__main__':   
+        t = Database()
+        test = t.get_people_data('Tyler','favorite_food')
+        print test
