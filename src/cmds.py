@@ -2,7 +2,7 @@
 #Commands
 #By Tyler Spadgenske
 
-import datetime, time, random
+import datetime, time, random, sys, os
 from tts import say
 from database import Database
 
@@ -276,6 +276,12 @@ class Who():
         say(self.color_string)
         say(self.cream_string)
         say(self.food_string)
+
+def shutdown():
+    say("Sutting down... Please Wait.")
+    time.sleep(5)
+    os.system("sudo halt")
+    sys.exit()
             
                 
     
