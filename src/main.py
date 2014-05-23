@@ -2,10 +2,10 @@
 #By Tyler Spadgenske
 DEBUG = True
 
-import getcmd, cmds
+import getcmd, cmds, traceback
 from tts import say
 
-def Cyclops(DEBUG=False):
+def main(DEBUG=False):
     #Main loop
     say('Hello. My name is Andy. Please wait while my system starts up.')
     while True:
@@ -20,7 +20,6 @@ def Cyclops(DEBUG=False):
             num += 1
         if len(cmd) == 0:
             cmd.append('')
-            say('Not complete command')
         #Determin master command
         if cmd[0] == 'what':
             cmds.What(cmd, DEBUG)
@@ -46,9 +45,16 @@ def Cyclops(DEBUG=False):
             cmds.shutdown()
         elif cmd[0] == 'sleep':
             cmds.sleep()
+        elif cmd[0] == 'meet':
+            cmds.Meet(cmd, DEBUG)
         else:
             say('Not valid command')
             
-            
-Cyclops(DEBUG=DEBUG)
-
+if __name__ == '__main__':
+    try:
+        main(DEBUG=DEBUG)
+    except:
+        error = traceback.format_exc()
+        error_log = open('/home/pi/ANDY/src/error.txt', 'w')
+        error_log.write(error)
+        print 'An error occurred. Please check error.txt for more details.'

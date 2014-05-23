@@ -287,6 +287,11 @@ def sleep():
     say("Going to sleep... Good Night.")
     time.sleep(5)
     sys.exit()
+
+class Meet():
+    def __init__(self, cmd, DEBUG):
+        pass
+    
             
                 
     
