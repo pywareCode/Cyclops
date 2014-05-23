@@ -251,31 +251,35 @@ class Who():
         self.iceCream = Database().get_people_data(name, 'favorite_ice_cream')
         self.age = Database().get_people_data(name, 'age')
         self.food = Database().get_people_data(name, 'favorite_food')
-    
-        if self.age == 'None':
-            self.age_string = 'I do not know how old ' + name + ' is. '
-        else:
-            self.age_string = name + ' is ' + self.age + ' years old. '
 
-        if self.color == 'None':
-            self.color_string = 'I do not know ' + name + 's favorite color. '
-        else:
-            self.color_string = name + 's favorite color is ' + self.color
+        if self.age != None:
+            if self.age == 'None':
+                self.age_string = 'I do not know how old ' + name + ' is. '
+            else:
+                self.age_string = name + ' is ' + self.age + ' years old. '
 
-        if self.iceCream == 'None':
-            self.cream_string = 'I do not know ' + name + 's favorite ice cream.'
-        else:
-            self.cream_string = name + 's favorite ice cream is ' + self.iceCream
+            if self.color == 'None':
+                self.color_string = 'I do not know ' + name + 's favorite color. '
+            else:
+                self.color_string = name + 's favorite color is ' + self.color
 
-        if self.food == 'None':
-            self.food_string = 'I do not know ' + name + 's favorite food.'
-        else:
-            self.food_string = name + 's favorite food is ' + self.food
+            if self.iceCream == 'None':
+                self.cream_string = 'I do not know ' + name + 's favorite ice cream.'
+            else:
+                self.cream_string = name + 's favorite ice cream is ' + self.iceCream
+
+            if self.food == 'None':
+                self.food_string = 'I do not know ' + name + 's favorite food.'
+            else:
+                self.food_string = name + 's favorite food is ' + self.food
         
-        say(self.age_string)
-        say(self.color_string)
-        say(self.cream_string)
-        say(self.food_string)
+            say(self.age_string)
+            say(self.color_string)
+            say(self.cream_string)
+            say(self.food_string)
+        else:
+            string = 'I do not know ' + name
+            say(string)
 
 def shutdown():
     say("Sutting down... Please Wait.")
@@ -290,7 +294,11 @@ def sleep():
 
 class Meet():
     def __init__(self, cmd, DEBUG):
-        pass
+        cmd.pop(0)
+        if len(cmd) >= 1:
+            meet = 'Hello ' + str(cmd[0]) + '... It is nice to meet you.'
+            say(meet)
+            Database().add_person(cmd[0])
     
             
                 

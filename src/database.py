@@ -2,6 +2,7 @@
 #By Tyler Spadgenske
 
 import mysql.connector
+import time
 
 class Database():
         def __init__(self):
@@ -54,27 +55,45 @@ class Database():
                                 self.image = str(image_path)
                                 self.seen = str(last_seen)
                                 self.food = str(favorite_food)
+                                break
 
                 #Return data wanted
-                if data == 'first_name':
-                        return self.name
-                elif data == 'favorite_color':
-                        return self.color
-                elif data == 'favorite_ice_cream':
-                        return self.iceCream
-                elif data == 'age':
-                        return self.currentAge
-                elif data == 'image_path':
-                        return self.image
-                elif data == 'last_seen':
-                        return self.seen
-                elif data == 'favorite_food':
-                        return self.food
-                else:
-                        return 'None'
+                if self.name == target:
+                        if data == 'first_name':
+                                return self.name
+                        elif data == 'favorite_color':
+                                return self.color
+                        elif data == 'favorite_ice_cream':
+                                return self.iceCream
+                        elif data == 'age':
+                                return self.currentAge
+                        elif data == 'image_path':
+                                return self.image
+                        elif data == 'last_seen':
+                                return self.seen
+                        elif data == 'favorite_food':
+                                return self.food
+                        else:
+                                return 'None'
+
+        def add_person(self, name):
+                name = name.lower().capitalize()
+                seen = time.strftime("%Y%m%d") 
+                new_person = ("INSERT INTO people (first_name, last_seen) VALUES ('" + name + "', " + seen + ")")
+                print new_person
+
+                self.cursor.execute(new_person)
+                self.conn.commit()
+
+        def add_person_data(self, name, data, target):
+                new_data = ("UPDATE people SET " + target + "='" + str(data) + "' WHERE first_name='" + name + "'")
+                print new_data
+                self.cursor.execute(new_data)
+                self.conn.commit()
 
                         
 if __name__ == '__main__':   
         t = Database()
         test = t.get_people_data('Tyler','favorite_food')
+        t.add_person("Saylor")
         print test
