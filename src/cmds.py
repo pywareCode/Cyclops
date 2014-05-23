@@ -282,6 +282,11 @@ def shutdown():
     time.sleep(5)
     os.system("sudo halt")
     sys.exit()
+
+def sleep():
+    say("Going to sleep... Good Night.")
+    time.sleep(5)
+    sys.exit()
             
                 
     

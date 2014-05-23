@@ -44,6 +44,8 @@ def Cyclops(DEBUG=False):
             cmds.Who(cmd, DEBUG)
         elif cmd[0] == 'shutdown':
             cmds.shutdown()
+        elif cmd[0] == 'sleep':
+            cmds.sleep()
         else:
             say('Not valid command')
             

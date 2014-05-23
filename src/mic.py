@@ -134,7 +134,7 @@ class Mic:
         CHUNK = 1024
 
         # number of seconds to allow to establish threshold
-        THRESHOLD_TIME = 3
+        THRESHOLD_TIME = 1
 
         # number of seconds to listen before forcing restart
         LISTEN_TIME = 10
