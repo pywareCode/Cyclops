@@ -95,5 +95,4 @@ class Database():
 if __name__ == '__main__':   
         t = Database()
         test = t.get_people_data('Tyler','favorite_food')
-        t.add_person("Saylor")
         print test

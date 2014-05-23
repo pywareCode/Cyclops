@@ -5,6 +5,7 @@
 import datetime, time, random, sys, os
 from tts import say
 from database import Database
+from getcmd import get_age
 
 class What(object):
     def __init__(self, cmd, DEBUG=False):
@@ -299,7 +300,12 @@ class Meet():
             meet = 'Hello ' + str(cmd[0]) + '... It is nice to meet you.'
             say(meet)
             Database().add_person(cmd[0])
-    
+            say('How old are you?')
+            self.age(cmd[0])
+
+    def age(self, name):
+        self.person_age = get_age()
+        Database().add_person_data(name, self.person_age, 'age')
             
                 
     

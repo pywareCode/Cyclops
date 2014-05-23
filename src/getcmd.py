@@ -18,14 +18,18 @@ def get():
 def get_age():
     microphone = mic.Mic(lmd='models/agelm.lm', dictd='models/agedic.dic',
                      lmd_persona='models/waitlm.lm', dictd_persona='models/waitdic.dic')
+    while True:
+        age = microphone.activeListen()
+        if age != '':
+            break
 
+    age = age.lower().capitalize()
     print age
-    age = activeListen()
-    return int(age)
+    return age
 
     
     
 if __name__ == '__main__':
-    get()
+    get_age()
         
     
