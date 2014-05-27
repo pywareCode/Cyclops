@@ -2,16 +2,18 @@
 #By Tyler Spadgenske
 DEBUG = True
 
-import getcmd, cmds, traceback
+import cmds, traceback
+from getcmd import Get_cmd
 from tts import say
 
 def main(DEBUG=False):
     #Main loop
     say('Hello. My name is Andy. Please wait while my system starts up.')
+    getit = Get_cmd()
     while True:
         print
         #Get the command and convert it to a list
-        cmd = getcmd.get().split()
+        cmd = getit.get().split()
         if DEBUG: print 'COMMAND:', cmd
 
         num = 0
