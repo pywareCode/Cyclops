@@ -1,7 +1,7 @@
 #Cyclops server test
 #By Tyler Spadgenske
 
-import socket
+import socket, os, time
 from tts import say
 
 class Server():
@@ -30,18 +30,17 @@ class Server():
 def start():
     serv = Server()
     while True:
-        files = open('/home/pi/ANDY/src/cmd.txt', 'w')
+        files = open('/home/pi/ANDY/src/cmd.txt', 'w+')
         cmd = serv.get_cmd()
-        print type(cmd)
         files.write(cmd)
         files.close()
         while True:
-            readit = open('/home/pi/ANDY/src/cmd.txt', 'r')
-            lines = readit.readlines()
-            if lines == []:
+            if os.path.isfile('/home/pi/ANDY/src/cmd.txt') == False:
                 break
         
     serv.end()
+    print 'IT QUIT!'
+    time.sleep(6)
         
 
 if __name__ == '__main__':

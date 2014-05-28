@@ -214,9 +214,9 @@ class Mic:
         transcribed = self.transcribe(AUDIO_FILE, PERSONA_ONLY=True)
 
         if PERSONA in transcribed:
-            return (THRESHOLD, PERSONA)
-
-        return (False, transcribed)
+            return True
+        else:
+            return False
 
     def activeListen(self, THRESHOLD=None, LISTEN=True, MUSIC=False):
         """

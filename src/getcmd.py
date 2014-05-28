@@ -1,34 +1,48 @@
 #Get Command
 #By Tyler Spadgenske
-import mic, tts, time
+import mic, tts, time, os
 
 class Get_cmd():
     def __init__(self):
         self.microphone = mic.Mic(lmd='models/lm.lm', dictd='models/dic.dic',
                      lmd_persona='models/waitlm.lm', dictd_persona='models/waitdic.dic')
-        time.sleep(3)
+        self.run_client = False
         
     def get(self):
         while True:
             while True:
-                self.word = self.microphone.passiveListen('andy')
-                if self.word[1].lower() == 'andy':
+                self.client_cmd = self.get_client_cmd()
+                if self.client_cmd != None:
+                    self.cmd = self.client_cmd
+                    self.run_client = True
                     break
-            self.cmd = self.microphone.activeListen()
+                
+                self.word = self.microphone.passiveListen('ANDY')
+                if self.word:
+                    break
+
+            if self.run_client != True:
+                self.cmd = self.microphone.activeListen()
+                self.run_client = False
+                
             print 'COMMAND: ', self.cmd
             return self.cmd
 
     def get_client_cmd(self):
         self.client = None
-        self.goodcmd = False
-        self.readit = open('/home/pi/ANDY/src/cmd.txt', 'r')
-        self.lines = self.readit.readlines()
-        print self.lines[0]
-        if self.lines != [] or self.lines != ['']:
-            self.goodcmd = True
-            self.client = self.lines[0]
+        if os.path.isfile('/home/pi/ANDY/src/cmd.txt'):
+            self.readit = open('/home/pi/ANDY/src/cmd.txt', 'r')
+            self.lines = self.readit.readlines()
+            if self.lines != []:
+                print self.lines[0]
+                self.client = self.lines[0]
 
-        return self.client, self.goodcmd 
+            os.remove('/home/pi/ANDY/src/cmd.txt')
+            self.readit.close()
+
+            self.client = None
+
+        return self.client
 def get_age():
     microphone = mic.Mic(lmd='models/agelm.lm', dictd='models/agedic.dic',
                      lmd_persona='models/waitlm.lm', dictd_persona='models/waitdic.dic')
