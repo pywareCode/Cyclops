@@ -7,14 +7,17 @@ class Get_cmd():
         self.microphone = mic.Mic(lmd='models/lm.lm', dictd='models/dic.dic',
                      lmd_persona='models/waitlm.lm', dictd_persona='models/waitdic.dic')
         self.run_client = False
+        self.client = None
         
     def get(self):
         while True:
             while True:
+                self.run_client = False
                 self.client_cmd = self.get_client_cmd()
                 if self.client_cmd != None:
                     self.cmd = self.client_cmd
                     self.run_client = True
+                    os.system('sudo rm cmd.txt')
                     break
                 
                 self.word = self.microphone.passiveListen('ANDY')
@@ -23,7 +26,6 @@ class Get_cmd():
 
             if self.run_client != True:
                 self.cmd = self.microphone.activeListen()
-                self.run_client = False
                 
             print 'COMMAND: ', self.cmd
             return self.cmd
@@ -34,15 +36,11 @@ class Get_cmd():
             self.readit = open('/home/pi/ANDY/src/cmd.txt', 'r')
             self.lines = self.readit.readlines()
             if self.lines != []:
-                print self.lines[0]
                 self.client = self.lines[0]
-
-            os.remove('/home/pi/ANDY/src/cmd.txt')
             self.readit.close()
 
-            self.client = None
-
         return self.client
+    
 def get_age():
     microphone = mic.Mic(lmd='models/agelm.lm', dictd='models/agedic.dic',
                      lmd_persona='models/waitlm.lm', dictd_persona='models/waitdic.dic')
