@@ -3,9 +3,15 @@
 
 import socket, os, time, sys
 from tts import say
+from config import Configure
 
 class Server():
     def __init__(self):
+        self.config = Configure()
+        self.start_server, self.client_ip, self.server_name, self.server_pass = self.config.read_server()
+        if self.start_server == False:
+            sys.exit()
+        say('Starting Server')
         self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.host = ''
         self.port = 5150

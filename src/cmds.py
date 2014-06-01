@@ -286,12 +286,12 @@ def shutdown():
     say("Sutting down... Please Wait.")
     time.sleep(5)
     os.system("sudo halt")
-    sys.exit()
+    sys.exit(0)
 
 def sleep():
     say("Going to sleep... Good Night.")
     time.sleep(5)
-    sys.exit()
+    sys.exit(0)
 
 class Meet():
     def __init__(self, cmd, DEBUG):

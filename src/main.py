@@ -2,11 +2,16 @@
 #By Tyler Spadgenske
 DEBUG = True
 
-import cmds, traceback, subprocess
+import cmds, traceback, subprocess, sys
 from getcmd import Get_cmd
 from tts import say
+from config import Configure
 
 def main(DEBUG=False):
+    config = Configure()
+    start_andy_on_boot, social_mode, rebel_mode, wander_mode = config.read()
+    if start_andy_on_boot == False:
+        sys.exit()
     #Main loop
     say('Hello. My name is Andy. Please wait while my system starts up.')
     getit = Get_cmd()
@@ -56,8 +61,11 @@ def main(DEBUG=False):
 if __name__ == '__main__':
     try:
         main(DEBUG=DEBUG)
+    except SystemExit:
+        pass
     except:
         error = traceback.format_exc()
         error_log = open('/home/pi/ANDY/src/error.txt', 'w')
         error_log.write(error)
         print 'An error occurred. Please check error.txt for more details.'
+        say('An error occurred.. Please check error dot text for more details.')
