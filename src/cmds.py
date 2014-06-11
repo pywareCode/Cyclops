@@ -6,6 +6,7 @@ import datetime, time, random, sys, os
 from tts import say
 from database import Database
 from getcmd import get_age
+import picamera
 
 class What(object):
     def __init__(self, cmd, DEBUG=False):
@@ -171,6 +172,7 @@ class Where():
 
 class Take():
     def __init__(self, cmd, DEBUG=False):
+        self.num = 0
         self.cmd = cmd
         self.DEBUG = DEBUG
         self.cmd.pop(0)
@@ -181,8 +183,25 @@ class Take():
                 self.video()
 
     def pic(self):
+        #Speak and open pic.txt file 
         say('Taking Picture')
+        self.pic_file = open('/home/pi/ANDY/src/pic.txt', 'r')
+        self.num = self.pic_file.readline().rstrip()
+        self.pic_file.close()
 
+        #Start camera and take picture
+        with picamera.PiCamera() as camera:
+            camera.resolution = (1024, 768)
+            camera.start_preview()
+            time.sleep(2)
+
+            #Take pic
+            camera.capture('/home/pi/ANDY/pictures/' + str(self.num) + '.jpg')
+
+        self.pic_file = open('/home/pi/ANDY/src/pic.txt', 'w')
+        self.pic_file.write(str(int(self.num) + 1))
+        self.pic_file.close()
+        
     def video(self):
         try:
             say('Recording video for ' + self.cmd[2] + ' seconds.')

@@ -2,7 +2,7 @@
 #By Tyler Spadgenske
 
 import mysql.connector
-import time
+import time, cmds
 
 class Database():
         def __init__(self):
@@ -77,6 +77,12 @@ class Database():
                                 return 'None'
 
         def add_person(self, name):
+                cmds.Take(['', 'picture'])
+                pic_num = open('/home/pi/ANDY/src/pic.txt', 'r')
+                pic = pic_num.readline().rstrip()
+                print pic
+                time.sleep(5)
+                
                 name = name.lower().capitalize()
                 seen = time.strftime("%Y%m%d") 
                 new_person = ("INSERT INTO people (first_name, last_seen) VALUES ('" + name + "', " + seen + ")")
