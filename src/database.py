@@ -80,13 +80,15 @@ class Database():
                 cmds.Take(['', 'picture'])
                 pic_num = open('/home/pi/ANDY/src/pic.txt', 'r')
                 pic = pic_num.readline().rstrip()
+                pic = str(int(pic) - 1)
                 print pic
                 time.sleep(5)
                 
                 name = name.lower().capitalize()
                 seen = time.strftime("%Y%m%d") 
-                new_person = ("INSERT INTO people (first_name, last_seen) VALUES ('" + name + "', " + seen + ")")
+                new_person = ("INSERT INTO people (first_name, last_seen, image_path) VALUES ('" + name + "', " + seen + ", '/home/pi/ANDY/pictures/" + str(pic) + ".jpg')")
                 print new_person
+                time.sleep(5)
 
                 self.cursor.execute(new_person)
                 self.conn.commit()

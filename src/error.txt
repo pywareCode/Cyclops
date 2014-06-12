@@ -1,10 +1,8 @@
 Traceback (most recent call last):
   File "main.py", line 63, in <module>
     main(DEBUG=DEBUG)
-  File "main.py", line 45, in main
-    cmds.Take(cmd, DEBUG)
-  File "/home/pi/ANDY/src/cmds.py", line 181, in __init__
-    self.pic()
-  File "/home/pi/ANDY/src/cmds.py", line 188, in pic
-    self.pic_file = open('/home/pi/ANDY/src/pic.txt', 'r')
-IOError: [Errno 2] No such file or directory: '/home/pi/ANDY/src/pic.txt'
+  File "main.py", line 49, in main
+    cmds.Tell(cmd, DEBUG)
+  File "/home/pi/ANDY/src/cmds.py", line 216, in __init__
+    self.cmd.pop(0)
+IndexError: pop from empty list
