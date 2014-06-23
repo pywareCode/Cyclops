@@ -123,16 +123,20 @@ class Walk():
                 self.right()
 
     def forward(self):
-        say('Walking Forward')
+        #say('Walking Forward')
+        say('I cannot walk forward because my motors are burnt out')
 
     def backward(self):
-        say('Walking Backward')
+        #say('Walking Backward')
+        say('I cannot walk backward because my motors are burnt out')
 
     def left(self):
-        say('Turning left')
+        #say('Turning left')
+        say('I cannot turn left because my motors are burnt out')
 
     def right(self):
-        say('Turning right')
+        #say('Turning right')
+        say('I cannot turn right because my motors are burnt out')
 
     def stop(self):
         say('Stopping')    
