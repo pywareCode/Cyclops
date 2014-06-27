@@ -16,4 +16,5 @@ Andy uses many different software packages to operate. Pocketsphinx is used for 
 Learn More
 ==========
 
-To learn more about the Andy Project and how you can make your own Andy, go to the <a href="https://github.com/spadgenske/ANDY/wiki">Andy Wiki.</a>
+To learn more about the Andy Project and how you can make your own Andy, go to Andy's page on <a href="hackaday.io/1205">Hackaday.io</a>.
+Also, check out <a href="http://youtu.be/Y5uNffNiwK4">a video</a> of Andy in action.
