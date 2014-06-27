@@ -189,7 +189,7 @@ class Take():
     def pic(self):
         #Speak and open pic.txt file 
         say('Taking Picture')
-        self.pic_file = open('/home/pi/ANDY/src/pic.txt', 'r')
+        self.pic_file = open('/home/pi/ANDY/src/temp/pic.txt', 'r')
         self.num = self.pic_file.readline().rstrip()
         self.pic_file.close()
 
@@ -202,7 +202,7 @@ class Take():
             #Take pic
             camera.capture('/home/pi/ANDY/pictures/' + str(self.num) + '.jpg')
 
-        self.pic_file = open('/home/pi/ANDY/src/pic.txt', 'w')
+        self.pic_file = open('/home/pi/ANDY/src/temp/pic.txt', 'w')
         self.pic_file.write(str(int(self.num) + 1))
         self.pic_file.close()
         
@@ -237,12 +237,14 @@ class Tell():
         jokes = [a, b, c, d, e, f, g]
         joke = random.choice(jokes)
 
-        say('Knock Knock.')
-        time.sleep(4)
-        say(joke[0])
-        time.sleep(4)
-        say(joke[1])
-
+        #say('Knock Knock.')
+        #time.sleep(4)
+        #say(joke[0])
+        #time.sleep(4)
+        #say(joke[1])
+        say('Why cant your nose be 12 inches long?')
+        time.sleep(3)
+        say('Because then it would be a foot!')
 
     def riddle(self):
         a = 'What gets wetter and wetter the more it dries?'

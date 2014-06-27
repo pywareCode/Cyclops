@@ -39,15 +39,15 @@ class Server():
 def start():
     serv = Server()
     while True:
-        files = open('/home/pi/ANDY/src/cmd.txt', 'w+')
-        os.system('sudo chmod 777 /home/pi/ANDY/src/cmd.txt')
+        files = open('/home/pi/ANDY/src/temp/cmd.txt', 'w+')
+        os.system('sudo chmod 777 /home/pi/ANDY/src/temp/cmd.txt')
         cmd = serv.get_cmd()
         if cmd == None:
             break
         files.write(cmd)
         files.close()
         while True:
-            if os.path.isfile('/home/pi/ANDY/src/cmd.txt') == False:
+            if os.path.isfile('/home/pi/ANDY/src/temp/cmd.txt') == False:
                 break
         
     serv.end()      

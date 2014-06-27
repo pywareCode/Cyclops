@@ -17,7 +17,7 @@ class Get_cmd():
                 if self.client_cmd != None:
                     self.cmd = self.client_cmd
                     self.run_client = True
-                    os.system('sudo rm cmd.txt')
+                    os.system('sudo rm /home/pi/ANDY/src/temp/cmd.txt')
                     break
                 
                 self.word = self.microphone.passiveListen('ANDY')
@@ -32,8 +32,8 @@ class Get_cmd():
 
     def get_client_cmd(self):
         self.client = None
-        if os.path.isfile('/home/pi/ANDY/src/cmd.txt'):
-            self.readit = open('/home/pi/ANDY/src/cmd.txt', 'r')
+        if os.path.isfile('/home/pi/ANDY/src/temp/cmd.txt'):
+            self.readit = open('/home/pi/ANDY/src/temp/cmd.txt', 'r')
             self.lines = self.readit.readlines()
             if self.lines != []:
                 self.client = self.lines[0]

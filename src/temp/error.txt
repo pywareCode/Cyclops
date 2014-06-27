@@ -5,7 +5,7 @@ Traceback (most recent call last):
     cmd = getit.get().split()
   File "/home/pi/ANDY/src/getcmd.py", line 23, in get
     self.word = self.microphone.passiveListen('ANDY')
-  File "/home/pi/ANDY/src/mic.py", line 179, in passiveListen
+  File "/home/pi/ANDY/src/mic.py", line 159, in passiveListen
     data = stream.read(CHUNK)
   File "/usr/lib/pymodules/python2.7/pyaudio.py", line 564, in read
     return pa.read_stream(self._stream, num_frames)

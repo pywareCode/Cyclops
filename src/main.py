@@ -65,7 +65,7 @@ if __name__ == '__main__':
         pass
     except:
         error = traceback.format_exc()
-        error_log = open('/home/pi/ANDY/src/error.txt', 'w')
+        error_log = open('/home/pi/ANDY/src/temp/error.txt', 'w')
         error_log.write(error)
         print 'An error occurred. Please check error.txt for more details.'
         say('An error occurred.. Please check error dot text for more details.')
