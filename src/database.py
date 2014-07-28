@@ -78,7 +78,7 @@ class Database():
 
         def add_person(self, name):
                 cmds.Take(['', 'picture'])
-                pic_num = open('/home/pi/ANDY/src/pic.txt', 'r')
+                pic_num = open('/home/pi/ANDY/src/temp/pic.txt', 'r')
                 pic = pic_num.readline().rstrip()
                 pic = str(int(pic) - 1)
                 print pic

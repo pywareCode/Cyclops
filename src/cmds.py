@@ -207,10 +207,12 @@ class Take():
         self.pic_file.close()
         
     def video(self):
-        try:
-            say('Recording video for ' + self.cmd[2] + ' seconds.')
-        except:
-            say('Please specify video length.')
+        say('Recording Video in 3')
+        time.sleep(1)
+        say('two')
+        time.sleep(1)
+        say('one')
+        time.sleep(1)
 
 class Tell():
     def __init__(self, cmd, DEBUG=False):

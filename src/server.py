@@ -54,5 +54,9 @@ def start():
 
 if __name__ == '__main__':
     while True:
-        start()
+        try:
+            start()
+        except:
+            say('Server Already Running')
+            sys.exit()
             

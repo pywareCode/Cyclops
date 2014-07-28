@@ -87,7 +87,7 @@ class Mic:
         CHUNK = 1024
 
         # number of seconds to allow to establish threshold
-        THRESHOLD_TIME = 1
+        THRESHOLD_TIME = 6
 
         # number of seconds to listen before forcing restart
         LISTEN_TIME = 10
@@ -137,7 +137,7 @@ class Mic:
         THRESHOLD_TIME = 3
 
         # number of seconds to listen before forcing restart
-        LISTEN_TIME = 10
+        LISTEN_TIME = 5
 
         # prepare recording stream
         audio = pyaudio.PyAudio()
@@ -226,7 +226,7 @@ class Mic:
         AUDIO_FILE = "active.wav"
         RATE = 16000
         CHUNK = 1024
-        LISTEN_TIME = 12
+        LISTEN_TIME = 2
 
         # user can request pre-recorded sound
         if not LISTEN:
@@ -294,8 +294,7 @@ if __name__ == '__main__':
     print 'Starting...'
     microphone = Mic(lmd='models/lm.lm', dictd='models/dic.dic',
                      lmd_persona='models/waitlm.lm', dictd_persona='models/waitdic.dic')
-    print 'Class created...'
-    time.sleep(3)
+
     while True:
         word = microphone.passiveListen('cyclops')
         if word[1].lower() == 'cyclops':
