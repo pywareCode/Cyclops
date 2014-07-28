@@ -2,26 +2,32 @@
 #By Tyler Spadgenske
 DEBUG = True
 
+#Import modules
 import cmds, traceback, subprocess, sys
 from getcmd import Get_cmd
 from tts import say
 from config import Configure
 
 def main(DEBUG=False):
+    #Read from configuration files and apply settings.
     config = Configure()
     start_andy_on_boot, social_mode, rebel_mode, wander_mode = config.read()
     if start_andy_on_boot == False:
         sys.exit()
-    #Main loop
+        
+    #Say start up slogan and check for command.
     say('Hello. My name is Andy. Please wait while my system starts up.')
     getit = Get_cmd()
+    #Start server process 
     subprocess.Popen(['python', 'server.py'])
+    #Enter main loop
     while True:
         print
         #Get the command and convert it to a list
         cmd = getit.get().split()
         if DEBUG: print 'COMMAND:', cmd
 
+        #Remove unused words from command
         num = 0
         for word in cmd:
             cmd[num] = word.lower()
@@ -64,6 +70,7 @@ if __name__ == '__main__':
     except SystemExit:
         pass
     except:
+        #If error occurs, save it to file
         error = traceback.format_exc()
         error_log = open('/home/pi/ANDY/src/temp/error.txt', 'w')
         error_log.write(error)

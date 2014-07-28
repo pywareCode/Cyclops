@@ -8,6 +8,7 @@ from database import Database
 from getcmd import get_age
 import picamera
 
+#Object for the "What" command
 class What(object):
     def __init__(self, cmd, DEBUG=False):
         self.DEBUG = DEBUG
@@ -22,11 +23,13 @@ class What(object):
         #Run time() if time question
         if cmd[0] == 'time' or cmd[0] == 'day':
             self.time()
+        #Run other simpler commands if question about Andy himself
         if self.cmd[0] == 'is' and self.cmd[1] == 'your':
             self.cmd.pop(0)
             self.cmd.pop(0)
             self.me()
 
+    #Convert month number to month text
     def get_month(self, num, num2):
         if num2 == '1':
             self.day = 'January'
@@ -53,7 +56,8 @@ class What(object):
         if num == '1' and num2 == '2':
             self.day = 'December'
         return self.day
-        
+
+    #Solve math equation and say answer
     def math(self):
         if self.DEBUG: print 'EQUATION:', self.cmd
 
@@ -87,7 +91,7 @@ class What(object):
         #Say time if selected command
         if self.cmd[0].lower() == 'time':
             time = str(self.raw_time[1])
-            say('It is ' + time[0] + time[1] + time[2] + time[3] + time[4] + ' AM.')
+            say('It is ' + time[0] + time[1] + time[2] + time[3] + time[4] + ' AM.') #TODO: Fix time to say it in 12hr time not 24hr time
         #Say day if selected command
         if self.cmd[0].lower() == 'day':
             time = str(self.raw_time[0])
@@ -112,6 +116,7 @@ class Walk():
         self.DEBUG = DEBUG
         print self.cmd
         self.cmd.pop(0)
+        #Get movement command and run function
         if len(self.cmd) != 0:
             if self.cmd[0] == 'forward':
                 self.forward()
@@ -122,6 +127,7 @@ class Walk():
             if self.cmd[0] == 'right':
                 self.right()
 
+    #define movement functions
     def forward(self):
         #say('Walking Forward')
         say('I cannot walk forward because my motors are burnt out')
