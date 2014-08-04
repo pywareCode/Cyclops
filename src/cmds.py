@@ -180,7 +180,7 @@ class Where():
     def find(self):
         say('GPS location module not added. find() called.')
 
-class Take():
+class Take(): #Commands with camera use
     def __init__(self, cmd, DEBUG=False):
         self.num = 0
         self.cmd = cmd
@@ -276,7 +276,7 @@ class Who():
 		self.cmd.pop(0)
 		self.get_info(self.cmd[0])
 	else:
-		say("I am sorry. I do not know who you are talking about.")
+	    say("I am sorry. I do not know who you are talking about.")
 		
     def get_info(self, name):
         name = name.lower()
@@ -325,20 +325,3 @@ def sleep():
     say("Going to sleep... Good Night.")
     time.sleep(5)
     sys.exit(0)
-
-class Meet():
-    def __init__(self, cmd, DEBUG):
-        cmd.pop(0)
-        if len(cmd) >= 1:
-            meet = 'Hello ' + str(cmd[0]) + '... It is nice to meet you.'
-            say(meet)
-            Database().add_person(cmd[0])
-            say('How old are you?')
-            self.age(cmd[0])
-
-    def age(self, name):
-        self.person_age = get_age()
-        Database().add_person_data(name, self.person_age, 'age')
-            
-                
-    

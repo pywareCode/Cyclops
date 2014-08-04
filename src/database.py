@@ -6,7 +6,7 @@ import time, cmds
 
 class Database():
         def __init__(self):
-                self.conn = mysql.connector.connect(user='root', password='raspberry', database='ANDY')
+                self.conn = mysql.connector.connect(user='root', password='raspberry', database='ANDY') #Ha ha. You know my password
                 self.cursor = self.conn.cursor()
                 self.objects = [None]
                 self.scripts = [None]
@@ -23,7 +23,6 @@ class Database():
                 self.cursor.execute(query)
 
                 for empid, object_name, image_path, file_path in self.cursor:
-                        print empid, object_name, image_path, file_path
                         self.objects.append(str(object_name))
                         self.scripts.append(str(file_path))
                         self.images.append(str(image_path))
@@ -81,13 +80,11 @@ class Database():
                 pic_num = open('/home/pi/ANDY/src/temp/pic.txt', 'r')
                 pic = pic_num.readline().rstrip()
                 pic = str(int(pic) - 1)
-                print pic
                 time.sleep(5)
                 
                 name = name.lower().capitalize()
                 seen = time.strftime("%Y%m%d") 
                 new_person = ("INSERT INTO people (first_name, last_seen, image_path) VALUES ('" + name + "', " + seen + ", '/home/pi/ANDY/pictures/" + str(pic) + ".jpg')")
-                print new_person
                 time.sleep(5)
 
                 self.cursor.execute(new_person)
@@ -95,12 +92,11 @@ class Database():
 
         def add_person_data(self, name, data, target):
                 new_data = ("UPDATE people SET " + target + "='" + str(data) + "' WHERE first_name='" + name + "'")
-                print new_data
                 self.cursor.execute(new_data)
                 self.conn.commit()
 
                         
 if __name__ == '__main__':   
         t = Database()
-        test = t.get_people_data('Tyler','favorite_food')
+        test = t.get_people_data('Tyler','age')
         print test

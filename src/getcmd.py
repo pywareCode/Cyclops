@@ -50,15 +50,36 @@ def get_age():
             break
 
     age = age.lower().capitalize()
-    print age
     return age
+
+def get_fav_color():
+    microphone = mic.Mic(lmd='models/colorlm.lm', dictd='models/colordic.dic',
+                    lmd_persona='models/waitlm.lm', dictd_persona='models/waitdic.dic')
+    while True:
+        fav_color = microphone.activeListen()
+        if fav_color != '':
+            break
+
+    fav_color = fav_color.lower().capitalize()
+    return fav_color
+
+def get_fav_ice_cream():
+    microphone = mic.Mic(lmd='models/creamlm.lm', dictd='models/creamdic.dic',
+                    lmd_persona='models/waitlm.lm', dictd_persona='models/waitdic.dic')
+    while True:
+        fav_cream = microphone.activeListen()
+        if fav_cream != '':
+            break
+
+    fav_cream = fav_cream.lower().capitalize()
+    return fav_cream
+
+    
 
     
     
 if __name__ == '__main__':
-    test = Get_cmd()
-    e, r = test.get_client_cmd()
-    print e
-    print r
+    fav_cream = get_fav_ice_cream()
+    print fav_cream
         
     

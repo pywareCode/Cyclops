@@ -1,0 +1,89 @@
+Language model created by QuickLM on Mon Aug  4 16:19:09 EDT 2014
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 12 sentences and 19 words
+
+\data\
+ngram 1=19
+ngram 2=29
+ngram 3=18
+
+\1-grams:
+-0.8451 </s> -0.3010
+-0.8451 <s> -0.2341
+-1.9243 BIRTHDAY -0.2958
+-1.9243 CAKE -0.2341
+-1.9243 CHIP -0.2341
+-1.6232 CHOCOLATE -0.2280
+-1.9243 COOKIE -0.2958
+-1.9243 DOUGH -0.2341
+-1.9243 FRENCH -0.2958
+-1.9243 MINT -0.2341
+-1.9243 NEAPOLITAN -0.2341
+-1.9243 PISTACHIO -0.2341
+-1.9243 RASPBERRY -0.2958
+-1.9243 RIPPLE -0.2341
+-1.9243 ROAD -0.2341
+-1.9243 ROCKY -0.2958
+-1.9243 SILK -0.2341
+-1.9243 STRAWBERRY -0.2341
+-1.9243 VANILLA -0.2341
+
+\2-grams:
+-1.3802 <s> BIRTHDAY 0.0000
+-1.0792 <s> CHOCOLATE 0.0000
+-1.3802 <s> COOKIE 0.0000
+-1.3802 <s> FRENCH 0.0000
+-1.3802 <s> MINT 0.0000
+-1.3802 <s> NEAPOLITAN 0.0000
+-1.3802 <s> PISTACHIO 0.0000
+-1.3802 <s> RASPBERRY 0.0000
+-1.3802 <s> ROCKY 0.0000
+-1.3802 <s> STRAWBERRY 0.0000
+-1.3802 <s> VANILLA 0.0000
+-0.3010 BIRTHDAY CAKE 0.0000
+-0.3010 CAKE </s> -0.3010
+-0.3010 CHIP </s> -0.3010
+-0.6021 CHOCOLATE </s> -0.3010
+-0.6021 CHOCOLATE CHIP 0.0000
+-0.3010 COOKIE DOUGH 0.0000
+-0.3010 DOUGH </s> -0.3010
+-0.3010 FRENCH SILK 0.0000
+-0.3010 MINT </s> -0.3010
+-0.3010 NEAPOLITAN </s> -0.3010
+-0.3010 PISTACHIO </s> -0.3010
+-0.3010 RASPBERRY RIPPLE 0.0000
+-0.3010 RIPPLE </s> -0.3010
+-0.3010 ROAD </s> -0.3010
+-0.3010 ROCKY ROAD 0.0000
+-0.3010 SILK </s> -0.3010
+-0.3010 STRAWBERRY </s> -0.3010
+-0.3010 VANILLA </s> -0.3010
+
+\3-grams:
+-0.3010 <s> BIRTHDAY CAKE
+-0.6021 <s> CHOCOLATE </s>
+-0.6021 <s> CHOCOLATE CHIP
+-0.3010 <s> COOKIE DOUGH
+-0.3010 <s> FRENCH SILK
+-0.3010 <s> MINT </s>
+-0.3010 <s> NEAPOLITAN </s>
+-0.3010 <s> PISTACHIO </s>
+-0.3010 <s> RASPBERRY RIPPLE
+-0.3010 <s> ROCKY ROAD
+-0.3010 <s> STRAWBERRY </s>
+-0.3010 <s> VANILLA </s>
+-0.3010 BIRTHDAY CAKE </s>
+-0.3010 CHOCOLATE CHIP </s>
+-0.3010 COOKIE DOUGH </s>
+-0.3010 FRENCH SILK </s>
+-0.3010 RASPBERRY RIPPLE </s>
+-0.3010 ROCKY ROAD </s>
+
+\end\

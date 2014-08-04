@@ -7,6 +7,7 @@ import cmds, traceback, subprocess, sys
 from getcmd import Get_cmd
 from tts import say
 from config import Configure
+from meet import Meet
 
 def main(DEBUG=False):
     #Read from configuration files and apply settings.
@@ -60,7 +61,7 @@ def main(DEBUG=False):
         elif cmd[0] == 'sleep':
             cmds.sleep()
         elif cmd[0] == 'meet':
-            cmds.Meet(cmd, DEBUG)
+            Meet(cmd, DEBUG)
         else:
             say('Not valid command')
             
