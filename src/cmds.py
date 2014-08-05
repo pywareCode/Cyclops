@@ -213,12 +213,28 @@ class Take(): #Commands with camera use
         self.pic_file.close()
         
     def video(self):
+        #Open file and get video number
+        self.vid_file = open('/home/pi/ANDY/src/temp/vid.txt', 'r')
+        self.vid_num = self.vid_file.readline().rstrip()
+        self.vid_file.close()
+        
         say('Recording Video in 3')
         time.sleep(1)
         say('two')
         time.sleep(1)
         say('one')
         time.sleep(1)
+
+        #Record Video
+        with picamera.PiCamera() as camera:
+            camera.resolution = (640, 480)
+            camera.start_recording('/home/pi/ANDY/videos/' + str(self.vid_num) + '.h264')
+            camera.wait_recording(10)
+            camera.stop_recording()
+
+        self.vid_file = open('/home/pi/ANDY/src/temp/vid.txt', 'w')
+        self.vid_file.write(str(int(self.num) + 1))
+        self.vid_file.close()
 
 class Tell():
     def __init__(self, cmd, DEBUG=False):
