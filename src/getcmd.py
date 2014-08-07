@@ -6,29 +6,31 @@ class Get_cmd():
     def __init__(self):
         self.microphone = mic.Mic(lmd='models/lm.lm', dictd='models/dic.dic',
                      lmd_persona='models/waitlm.lm', dictd_persona='models/waitdic.dic')
+
+        self.THRESHOLD = self.microphone.fetchThreshold()
+        print 'Threshold: ' + str(self.THRESHOLD)
         self.run_client = False
         self.client = None
         
     def get(self):
         while True:
-            while True:
-                self.run_client = False
-                self.client_cmd = self.get_client_cmd()
-                if self.client_cmd != None:
-                    self.cmd = self.client_cmd
-                    self.run_client = True
-                    os.system('sudo rm /home/pi/ANDY/src/temp/cmd.txt')
-                    break
+            self.run_client = False
+            self.client_cmd = self.get_client_cmd()
+            if self.client_cmd != None:
+                self.cmd = self.client_cmd
+                self.run_client = True
+                os.system('sudo rm /home/pi/ANDY/src/temp/cmd.txt')
+                break
                 
-                self.word = self.microphone.passiveListen('ANDY')
-                if self.word:
-                    break
+            self.word = self.microphone.passiveListen('ANDY')
+            if self.word:
+                break
 
-            if self.run_client != True:
-                self.cmd = self.microphone.activeListen()
+        if self.run_client != True:
+            self.cmd = self.microphone.activeListen(THRESHOLD=self.THRESHOLD)
                 
-            print 'COMMAND: ', self.cmd
-            return self.cmd
+        print 'COMMAND: ', self.cmd
+        return self.cmd
 
     def get_client_cmd(self):
         self.client = None

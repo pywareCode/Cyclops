@@ -222,23 +222,25 @@ class Mic:
         """
             Records until a second of silence or times out after 12 seconds
         """
-
         AUDIO_FILE = "active.wav"
         RATE = 16000
         CHUNK = 1024
         LISTEN_TIME = 2
 
         # user can request pre-recorded sound
-        if not LISTEN:
-            if not os.path.exists(AUDIO_FILE):
-                return None
-
-            return self.transcribe(AUDIO_FILE)
+        #if not LISTEN:
+         #   if not os.path.exists(AUDIO_FILE):
+          #      return None
+#
+ #           return self.transcribe(AUDIO_FILE)
 
         # check if no threshold provided
         if THRESHOLD == None:
+            print 'Getting threshold...'
             THRESHOLD = self.fetchThreshold()
 
+        #Give user a little time
+        time.sleep(2)
         os.system("aplay -D hw:1,0 beep_hi.wav")
 
         # prepare recording stream
@@ -289,17 +291,3 @@ class Mic:
             return self.transcribe(AUDIO_FILE, MUSIC=True)
 
         return self.transcribe(AUDIO_FILE)
-
-if __name__ == '__main__':
-    print 'Starting...'
-    microphone = Mic(lmd='models/lm.lm', dictd='models/dic.dic',
-                     lmd_persona='models/waitlm.lm', dictd_persona='models/waitdic.dic')
-
-    while True:
-        word = microphone.passiveListen('cyclops')
-        if word[1].lower() == 'cyclops':
-            print 'YES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
-            break
-    cmd = microphone.activeListen()
-    print 'COMMAND: ', cmd
-    
