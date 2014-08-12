@@ -17,6 +17,7 @@ class Meet():
             say('What is your favorite color?')
             self.color(cmd[0])
             say('What is your favorite ice cream?')
+            self.ice_cream(cmd[0])
 
     def age(self, name): #Gets persons age and adds it to database
         self.person_age = get_age()

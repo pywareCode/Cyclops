@@ -5,6 +5,12 @@ Traceback (most recent call last):
     cmds.Take(cmd, DEBUG)
   File "/home/pi/ANDY/src/cmds.py", line 193, in __init__
     self.video()
-  File "/home/pi/ANDY/src/cmds.py", line 218, in video
-    self.vid_num = self.pic_file.readline().rstrip()
-AttributeError: Take instance has no attribute 'pic_file'
+  File "/home/pi/ANDY/src/cmds.py", line 229, in video
+    with picamera.PiCamera() as camera:
+  File "/usr/lib/python2.7/dist-packages/picamera/camera.py", line 303, in __init__
+    self._init_camera()
+  File "/usr/lib/python2.7/dist-packages/picamera/camera.py", line 400, in _init_camera
+    prefix="Camera component couldn't be enabled")
+  File "/usr/lib/python2.7/dist-packages/picamera/exc.py", line 127, in mmal_check
+    raise PiCameraMMALError(status, prefix)
+PiCameraMMALError: Camera component couldn't be enabled: Out of resources (other than memory)

@@ -207,7 +207,7 @@ class Take(): #Commands with camera use
 
             #Take pic
             camera.capture('/home/pi/ANDY/pictures/' + str(self.num) + '.jpg')
-
+            camera.stop_preview()
         self.pic_file = open('/home/pi/ANDY/src/temp/pic.txt', 'w')
         self.pic_file.write(str(int(self.num) + 1))
         self.pic_file.close()
@@ -228,12 +228,14 @@ class Take(): #Commands with camera use
         #Record Video
         with picamera.PiCamera() as camera:
             camera.resolution = (640, 480)
+            camera.start_preview()
             camera.start_recording('/home/pi/ANDY/videos/' + str(self.vid_num) + '.h264')
             camera.wait_recording(10)
             camera.stop_recording()
+            camera.stop_preview()
 
         self.vid_file = open('/home/pi/ANDY/src/temp/vid.txt', 'w')
-        self.vid_file.write(str(int(self.num) + 1))
+        self.vid_file.write(str(int(self.vid_num) + 1))
         self.vid_file.close()
 
 class Tell():
