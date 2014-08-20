@@ -1,4 +1,4 @@
-update=8/19/2014 2:36:50 PM
+update=7/23/2014 4:10:39 PM
 version=1
 last_client=eeschema
 [cvpcb]
@@ -6,14 +6,12 @@ version=1
 NetIExt=net
 [cvpcb/libraries]
 EquName1=devcms
-[general]
-version=1
 [pcbnew]
 version=1
-LastNetListRead=Andy.net
+LastNetListRead=
 UseCmpFile=1
-PadDrill=0.040000000000
-PadDrillOvalY=0.040000000000
+PadDrill=0.600000000000
+PadDrillOvalY=0.600000000000
 PadSizeH=1.500000000000
 PadSizeV=1.500000000000
 PcbTextSizeV=1.500000000000
@@ -45,7 +43,8 @@ LibName13=led
 LibName14=dip_sockets
 LibName15=pga_sockets
 LibName16=valves
-LibName17=RPiHeader
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
