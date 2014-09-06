@@ -1,16 +1,14 @@
 Traceback (most recent call last):
   File "main.py", line 70, in <module>
     main(DEBUG=DEBUG)
-  File "main.py", line 52, in main
-    cmds.Take(cmd, DEBUG)
-  File "/home/pi/ANDY/src/cmds.py", line 193, in __init__
-    self.video()
-  File "/home/pi/ANDY/src/cmds.py", line 229, in video
-    with picamera.PiCamera() as camera:
-  File "/usr/lib/python2.7/dist-packages/picamera/camera.py", line 303, in __init__
-    self._init_camera()
-  File "/usr/lib/python2.7/dist-packages/picamera/camera.py", line 400, in _init_camera
-    prefix="Camera component couldn't be enabled")
-  File "/usr/lib/python2.7/dist-packages/picamera/exc.py", line 127, in mmal_check
-    raise PiCameraMMALError(status, prefix)
-PiCameraMMALError: Camera component couldn't be enabled: Out of resources (other than memory)
+  File "main.py", line 21, in main
+    getit = Get_cmd()
+  File "/home/pi/ANDY/src/getcmd.py", line 10, in __init__
+    self.THRESHOLD = self.microphone.fetchThreshold()
+  File "/home/pi/ANDY/src/mic.py", line 101, in fetchThreshold
+    frames_per_buffer=CHUNK)
+  File "/usr/lib/pymodules/python2.7/pyaudio.py", line 714, in open
+    stream = Stream(self, *args, **kwargs)
+  File "/usr/lib/pymodules/python2.7/pyaudio.py", line 396, in __init__
+    self._stream = pa.open(**arguments)
+IOError: [Errno Invalid input device (no default output device)] -9996

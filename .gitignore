@@ -27,6 +27,7 @@ pip-log.txt
 .tox
 nosetests.xml
 ANDY/pictures/*
+ANDY/videos/*
 # Translations
 *.mo
 
