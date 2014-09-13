@@ -10,16 +10,24 @@ class Servo():
         self.DEBUG = True
         #Setup GPIO
         GPIO.setmode(GPIO.BOARD)
+        GPIO.setup(11, GPIO.OUT)
         GPIO.setup(7, GPIO.OUT)
-
+        GPIO.setup(13, GPIO.OUT)
+        GPIO.setup(15, GPIO.OUT)
+        
         #Setup PWM
         self.frequency = 50#Hertz
-        self.left_ankle = GPIO.PWM(7, self.frequency)
+        self.left_foot = GPIO.PWM(11, self.frequency)
+        self.left_knee = GPIO.PWM(7, self.frequency)
+        self.right_knee = GPIO.PWM(13, self.frequency)
+        self.right_foot = GPIO.PWM(15, self.frequency)
 
         #Setup duty cycles
         self.RIGHT = .4
         self.CENTER = 1.5
         self.LEFT = 2.5
+
+        self.foot_left = 2
 
         self.msPerCycle = 1000 / self.frequency
 
@@ -33,21 +41,19 @@ class Servo():
         servo.start(self.dutyCyclePercentage)
         
     def cleanup(self):
-        self.left_ankle.stop()
-        GPIO.cleanup()
+        self.left_foot.stop()
+        self.left_knee.stop()
+        self.right_knee.stop()
+        #GPIO.cleanup()
 
 if __name__ == '__main__':
     test = Servo()
-    try:
-        while True:
-            test.move(test.RIGHT, test.left_ankle)
-            time.sleep(1)
-            print 'right'
-            test.move(test.LEFT, test.left_ankle)
-            time.sleep(1)
-            print 'left'
-            test.move(test.CENTER, test.left_ankle)
-            print 'center'
-            time.sleep(1)
-    except:
-        test.cleanup()
+    test.move(test.RIGHT, test.left_knee)
+    time.sleep(1)
+    test.cleanup()
+    time.sleep(.5)
+    test.move(test.RIGHT, test.right_knee)
+    time.sleep(1)
+        
+    test.cleanup()
+    GPIO.cleanup()
