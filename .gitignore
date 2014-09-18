@@ -35,7 +35,6 @@ ANDY/videos/*
 .mr.developer.cfg
 .project
 .pydevproject
-*.wav
 *.pyc
 *.dsn.autosave
 *.flac
