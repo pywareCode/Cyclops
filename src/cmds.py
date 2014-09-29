@@ -211,6 +211,18 @@ class Take(): #Commands with camera use
         self.pic_file = open('/home/pi/ANDY/src/temp/pic.txt', 'w')
         self.pic_file.write(str(int(self.num) + 1))
         self.pic_file.close()
+
+        #Upload to Dropbox
+        try:
+            os.system('/home/pi/Dropbox-Uploader/./dropbox_uploader.sh upload ' +
+                      '/home/pi/ANDY/pictures/' + str(self.num) + '.jpg ' + str(self.num) + '.jpg')
+        except:
+            say('Failed to upload to drop box')#Upload to Dropbox
+        try:
+            os.system('/home/pi/Dropbox-Uploader/./dropbox_uploader.sh upload ' +
+                      '/home/pi/ANDY/pictures/' + str(self.num) + '.jpg ' + str(self.num) + '.jpg')
+        except:
+            say('Failed to upload to drop box')
         
     def video(self):
         #Open file and get video number
